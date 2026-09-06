@@ -1,0 +1,4716 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.5.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:29ffb000-bedb-4199-adef-e3c6be796c54",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-09-06T20:18:45.176Z",
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
+    "tools": [
+      {
+        "vendor": "npm",
+        "name": "cli",
+        "version": "11.16.0"
+      }
+    ],
+    "component": {
+      "bom-ref": "sand-workbench@0.1.0",
+      "type": "library",
+      "name": "sand_workbench",
+      "version": "0.1.0",
+      "scope": "required",
+      "description": "SAND — a verifiable engineering workbench",
+      "purl": "pkg:npm/sand-workbench@0.1.0",
+      "properties": [
+        {
+          "name": "cdx:npm:package:private",
+          "value": "true"
+        }
+      ],
+      "externalReferences": []
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "@fastify/ajv-compiler@4.0.6",
+      "type": "library",
+      "name": "@fastify/ajv-compiler",
+      "version": "4.0.6",
+      "scope": "required",
+      "author": "Manuel Spigolon <behemoth89@gmail.com> (https://github.com/Eomm)",
+      "description": "Build and manage the AJV instances for the fastify framework",
+      "purl": "pkg:npm/%40fastify/ajv-compiler@4.0.6",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@fastify/ajv-compiler/-/ajv-compiler-4.0.6.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/fastify/ajv-compiler.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/fastify/ajv-compiler#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/fastify/ajv-compiler/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "36dbb333449f68c25b1a59e3afd2d64143792f3812adb07cb5fff045935ab3ee04d4efcd9b3979ddeeebb93eb51c36724422460ba1712288263593b573911304"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "fast-uri@4.1.4",
+      "type": "library",
+      "name": "fast-uri",
+      "version": "4.1.4",
+      "scope": "required",
+      "author": "Vincent Le Goff <vince.legoff@gmail.com> (https://github.com/zekth)",
+      "description": "Dependency-free RFC 3986 URI toolbox",
+      "purl": "pkg:npm/fast-uri@4.1.4",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/fast-uri/-/fast-uri-4.1.4.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/fastify/fast-uri.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/fastify/fast-uri"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/fastify/fast-uri/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "74e0d7ac8c654bd25276002784850a3a8b0a575a0cb54d95b55c3ced045a1f3ca5e63c4edbdd088b9b4465f09fcdf58d1e2de3296c0149d423d2a232b2175975"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@fastify/error@4.2.0",
+      "type": "library",
+      "name": "@fastify/error",
+      "version": "4.2.0",
+      "scope": "required",
+      "author": "Tomas Della Vedova",
+      "description": "A small utility, used by Fastify itself, for generating consistent error objects across your codebase and plugins.",
+      "purl": "pkg:npm/%40fastify/error@4.2.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@fastify/error/-/error-4.2.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/fastify/fastify-error.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/fastify/fastify-error#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/fastify/fastify-error/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "452a37b150d77c7b2488164a04f4609d04ed22aa62ffbce124e1260310a205c33b774bb07467712e5b0268bcc6b3cbfc367c484657c6d0de75a79c8568e7a7b5"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@fastify/fast-json-stringify-compiler@5.1.0",
+      "type": "library",
+      "name": "@fastify/fast-json-stringify-compiler",
+      "version": "5.1.0",
+      "scope": "required",
+      "author": "Manuel Spigolon <manuel.spigolon@nearform.com> (https://github.com/Eomm)",
+      "description": "Build and manage the fast-json-stringify instances for the fastify framework",
+      "purl": "pkg:npm/%40fastify/fast-json-stringify-compiler@5.1.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@fastify/fast-json-stringify-compiler/-/fast-json-stringify-compiler-5.1.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/fastify/fast-json-stringify-compiler.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/fastify/fast-json-stringify-compiler#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/fastify/fast-json-stringify-compiler/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "3f1718b4a2db43c67ec80a62aa32bc170c48c2f123dfc9363a22dcd7bbbc7642529667e2db01c73da4a76a8a813d0aadbc5f1856c0e00e93f6b270c27c5ae97f"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@fastify/forwarded@3.0.2",
+      "type": "library",
+      "name": "@fastify/forwarded",
+      "version": "3.0.2",
+      "scope": "required",
+      "author": "Douglas Christopher Wilson <doug@somethingdoug.com>",
+      "description": "Parse HTTP X-Forwarded-For header",
+      "purl": "pkg:npm/%40fastify/forwarded@3.0.2",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@fastify/forwarded/-/forwarded-3.0.2.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/fastify/forwarded.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/fastify/forwarded#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/fastify/forwarded/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "344f0780a2e061e8d5f650e9aa410568328c2d87a524155f1de92107450abd7d2085a817449aa0ebc7de83c7abd4d3d7c46e0df62eaf3f1cedf04fb7c077dc98"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@fastify/merge-json-schemas@0.2.1",
+      "type": "library",
+      "name": "@fastify/merge-json-schemas",
+      "version": "0.2.1",
+      "scope": "required",
+      "author": "Ivan Tymoshenko <ivan@tymoshenko.me>",
+      "description": "Builds a logical conjunction (AND) of multiple JSON schemas",
+      "purl": "pkg:npm/%40fastify/merge-json-schemas@0.2.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@fastify/merge-json-schemas/-/merge-json-schemas-0.2.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/fastify/merge-json-schemas.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/fastify/merge-json-schemas#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/fastify/merge-json-schemas/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "380dca1810b2e8ab48bcb7fc0c8342e7cf34a398819435f84b1ccb412f07a2b2406ea96eccb467f345175346f1667ed43858458294490dab1fc27f671b8146e0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@fastify/proxy-addr@5.1.0",
+      "type": "library",
+      "name": "@fastify/proxy-addr",
+      "version": "5.1.0",
+      "scope": "required",
+      "author": "Douglas Christopher Wilson <doug@somethingdoug.com>",
+      "description": "Determine the address of a proxied request",
+      "purl": "pkg:npm/%40fastify/proxy-addr@5.1.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@fastify/proxy-addr/-/proxy-addr-5.1.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/fastify/proxy-addr.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/fastify/proxy-addr#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/fastify/proxy-addr/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "20d4beea087dd5c2d48c1f8f5477eed54a9c07be92aada72a7b6e72fe158a23863ca0bce3c0f5cb620ff2432acc83f5782ee215210922413e283fc3b76e35a8f"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@fastify/rate-limit@11.2.0",
+      "type": "library",
+      "name": "@fastify/rate-limit",
+      "version": "11.2.0",
+      "scope": "required",
+      "author": "Tomas Della Vedova - @delvedor (https://delvedor.dev)",
+      "description": "A low overhead rate limiter for your routes",
+      "purl": "pkg:npm/%40fastify/rate-limit@11.2.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@fastify/rate-limit/-/rate-limit-11.2.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/fastify/fastify-rate-limit.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/fastify/fastify-rate-limit#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/fastify/fastify-rate-limit/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "5fba2c25de174af3287a362b9c991265862363578d62806a8639737f545a902db6d38a84c45a991532a3e7e4fb56ecc0fe2508f59dd4a12a904640761e91b4a1"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@fastify/swagger@9.8.1",
+      "type": "library",
+      "name": "@fastify/swagger",
+      "version": "9.8.1",
+      "scope": "required",
+      "author": "Tomas Della Vedova - @delvedor (https://delvedor.dev)",
+      "description": "Serve Swagger/OpenAPI documentation for Fastify, supporting dynamic generation",
+      "purl": "pkg:npm/%40fastify/swagger@9.8.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@fastify/swagger/-/swagger-9.8.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/fastify/fastify-swagger.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/fastify/fastify-swagger#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/fastify/fastify-swagger/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "5691cc9ea65363c881658244f165a46ca3eb5c8616cb6ac37c87f9a8bafa0f3652a50619f8ac5055c2458aafc0325bcdc08e2008177aebefa2525c575c64f421"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@fastify/websocket@11.3.0",
+      "type": "library",
+      "name": "@fastify/websocket",
+      "version": "11.3.0",
+      "scope": "required",
+      "author": "Matteo Collina <hello@matteocollina.com>",
+      "description": "basic websocket support for fastify",
+      "purl": "pkg:npm/%40fastify/websocket@11.3.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@fastify/websocket/-/websocket-11.3.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/fastify/fastify-websocket.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/fastify/fastify-websocket#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/fastify/fastify-websocket/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "83cf5a838042703f583f9c016578b1ce82e7b9fe63f3da7fb1715c7e90a2bf6a5d124618ba4044a0ade1795ceab29d0402db33543736041646d0a66a7804a120"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@lukeed/ms@2.0.2",
+      "type": "library",
+      "name": "@lukeed/ms",
+      "version": "2.0.2",
+      "scope": "required",
+      "author": "Luke Edwards",
+      "description": "A tiny (414B) and fast utility to convert milliseconds to and from strings.",
+      "purl": "pkg:npm/%40lukeed/ms@2.0.2",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@lukeed/ms/-/ms-2.0.2.tgz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "f48d999faf8d24b7da1a8cfd8cdde5a700e0018bdf19e35875b0088c93aacece13a5cf9553726aab82287d250129a8e20d2f24f5f648835f3fcf5de6a64d5bb0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@monaco-editor/loader@1.7.0",
+      "type": "library",
+      "name": "@monaco-editor/loader",
+      "version": "1.7.0",
+      "scope": "required",
+      "author": "Suren Atoyan <contact@surenatoyan.com>",
+      "description": "the library aims to setup monaco editor into your browser",
+      "purl": "pkg:npm/%40monaco-editor/loader@1.7.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@monaco-editor/loader/-/loader-1.7.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/suren-atoyan/monaco-loader.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/suren-atoyan/monaco-loader.git"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "808c11d47ac9aebc7ebdfc8e858982674fc9716a86e646df1bbf9dddffc2d4b5e4d84bf301b1d2837310e653b6b0c968f62ce8019d38b21a217ca2d54fa72b54"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@monaco-editor/react@4.7.0",
+      "type": "library",
+      "name": "@monaco-editor/react",
+      "version": "4.7.0",
+      "scope": "required",
+      "author": "Suren Atoyan <contact@surenatoyan.com>",
+      "description": "Monaco Editor for React - use the monaco-editor in any React application without needing to use webpack (or rollup/parcel/etc) configuration files / plugins",
+      "purl": "pkg:npm/%40monaco-editor/react@4.7.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@monaco-editor/react/-/react-4.7.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/suren-atoyan/monaco-react.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/suren-atoyan/monaco-react#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/suren-atoyan/monaco-react/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "732cd7402b4ee3bc9dcf1a50b42192406382f069376547815c50310fe0965d8168e4ea99c995289c59740f05254f201f4479ed05fc36a77c38b3d47aa1ed5e08"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/api@1.9.1",
+      "type": "library",
+      "name": "@opentelemetry/api",
+      "version": "1.9.1",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "Public API for OpenTelemetry",
+      "purl": "pkg:npm/%40opentelemetry/api@1.9.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/api/-/api-1.9.1.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/api"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "80bc8994f1cf658740935244340f4b7877a365ed538bbeffa537859bf9cc5e6407fc715995c4bf3b65c907e2fc7e46eb352aa176d96f8c1563c705186a7347e5"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/api-logs@0.222.0",
+      "type": "library",
+      "name": "@opentelemetry/api-logs",
+      "version": "0.222.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "Public logs API for OpenTelemetry",
+      "purl": "pkg:npm/%40opentelemetry/api-logs@0.222.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/api-logs/-/api-logs-0.222.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/experimental/packages/api-logs"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "f666f521ff8817abb46555e41d0ea880469ee47c00e9a8c85548294834324404b17ede814971ef06f3e8a1195edf214dfdf2a709d48e9eebb4382dcf2dc17afa"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/configuration@0.222.0",
+      "type": "library",
+      "name": "@opentelemetry/configuration",
+      "version": "0.222.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "OpenTelemetry Configuration",
+      "purl": "pkg:npm/%40opentelemetry/configuration@0.222.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/configuration/-/configuration-0.222.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/experimental/packages/configuration"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ccd586984bf25fb0946d2e85e8f2a2ee17f7085fd27dfcde058c9655001f69d67c84e0ebbcb9aa577214195b754a2ab261a9d13c773c56e8683b4421f4e12eba"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/context-async-hooks@2.11.0",
+      "type": "library",
+      "name": "@opentelemetry/context-async-hooks",
+      "version": "2.11.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "OpenTelemetry AsyncLocalStorage-based Context Manager",
+      "purl": "pkg:npm/%40opentelemetry/context-async-hooks@2.11.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/context-async-hooks/-/context-async-hooks-2.11.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/packages/opentelemetry-context-async-hooks"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "4ebefd0f2588f22b6c05d83e8c7fa8a637ebc0bcd7f9eae4d7f131908c215a80158d5ac9227db2e7e7068d30b4572f1fc8d200ff2f30b893d9c2bd53df109979"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/core@2.11.0",
+      "type": "library",
+      "name": "@opentelemetry/core",
+      "version": "2.11.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "OpenTelemetry Core provides constants and utilities shared by all OpenTelemetry SDK packages.",
+      "purl": "pkg:npm/%40opentelemetry/core@2.11.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/core/-/core-2.11.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/packages/opentelemetry-core"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ed83f8e171f4b55ebe31be78c766067fce22ef28bedf530166513c270be8ce4c724ef5db4a9d745fb708ed8138f42849dec84c268066089177fb540504972d18"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/exporter-logs-otlp-grpc@0.222.0",
+      "type": "library",
+      "name": "@opentelemetry/exporter-logs-otlp-grpc",
+      "version": "0.222.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "OpenTelemetry Collector Exporter allows user to send collected log records to the OpenTelemetry Collector",
+      "purl": "pkg:npm/%40opentelemetry/exporter-logs-otlp-grpc@0.222.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/exporter-logs-otlp-grpc/-/exporter-logs-otlp-grpc-0.222.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/experimental/packages/exporter-logs-otlp-grpc"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "1c7e0e8bf13c1d704ab5c8e07153c91acae0fa54acb5dc359bdddbad1769563e428cca724e4bff3b46583173fa41754468b8e3162bedcd4bb863cfa2d542698f"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/exporter-logs-otlp-http@0.222.0",
+      "type": "library",
+      "name": "@opentelemetry/exporter-logs-otlp-http",
+      "version": "0.222.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "OpenTelemetry Collector Logs Exporter allows user to send collected logs to the OpenTelemetry Collector",
+      "purl": "pkg:npm/%40opentelemetry/exporter-logs-otlp-http@0.222.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/exporter-logs-otlp-http/-/exporter-logs-otlp-http-0.222.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/open-telemetry/opentelemetry-js.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/experimental/packages/exporter-logs-otlp-http"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "1aac0b6688494dffecb6d6253a94f5a054c9f5271868a9e4d2c3b1e107bff8a99761539afaff7871f9e452414a0eebd33835a108be741f3de0bec643ea7810a6"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/exporter-logs-otlp-proto@0.222.0",
+      "type": "library",
+      "name": "@opentelemetry/exporter-logs-otlp-proto",
+      "version": "0.222.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "An OTLP exporter to send logs using protobuf over HTTP",
+      "purl": "pkg:npm/%40opentelemetry/exporter-logs-otlp-proto@0.222.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/exporter-logs-otlp-proto/-/exporter-logs-otlp-proto-0.222.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/experimental/packages/exporter-logs-otlp-proto"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "2e508326e6b39df14fce31e82978cdfebf53e6980266999585e67f126c0c52132fa7123b4570e6b1d2d7a18a65e6cb9840d930c970146615445ca7b795ebfc1e"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/exporter-metrics-otlp-grpc@0.222.0",
+      "type": "library",
+      "name": "@opentelemetry/exporter-metrics-otlp-grpc",
+      "version": "0.222.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "OpenTelemetry Collector Metrics Exporter allows user to send collected metrics to the OpenTelemetry Collector",
+      "purl": "pkg:npm/%40opentelemetry/exporter-metrics-otlp-grpc@0.222.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/exporter-metrics-otlp-grpc/-/exporter-metrics-otlp-grpc-0.222.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/experimental/packages/opentelemetry-exporter-metrics-otlp-grpc"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "9cf53682941625f42db5ff80ef568b90a10e4283ba9fa406b39413b4f6a08bfadbdcb735239e5ba915e82d0119b16a968a673c79ab36568d7af0d913681cb143"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/exporter-metrics-otlp-http@0.222.0",
+      "type": "library",
+      "name": "@opentelemetry/exporter-metrics-otlp-http",
+      "version": "0.222.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "OpenTelemetry Collector Metrics Exporter allows user to send collected metrics to the OpenTelemetry Collector",
+      "purl": "pkg:npm/%40opentelemetry/exporter-metrics-otlp-http@0.222.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/exporter-metrics-otlp-http/-/exporter-metrics-otlp-http-0.222.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/experimental/packages/opentelemetry-exporter-metrics-otlp-http"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "e8aa3ed1b80d3fa5781bf46c98d05293994ed41fe5a3dcfab6f2e9158df290f3debd7373166396dc2f611264edd33282bc7a2fcaba25dd36258381d56f98308e"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/exporter-metrics-otlp-proto@0.222.0",
+      "type": "library",
+      "name": "@opentelemetry/exporter-metrics-otlp-proto",
+      "version": "0.222.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "OpenTelemetry Collector Metrics Exporter allows user to send collected metrics to the OpenTelemetry Collector using protobuf over HTTP",
+      "purl": "pkg:npm/%40opentelemetry/exporter-metrics-otlp-proto@0.222.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/exporter-metrics-otlp-proto/-/exporter-metrics-otlp-proto-0.222.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/experimental/packages/opentelemetry-exporter-metrics-otlp-proto"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "b3564fc12f0883b7294662f7902a1b3da15b7a633cd5d274dcb34faecb8ddf68779820ef345d8d435a511ebb8e8eed0fd28d53676e0b91903af39aed41a97528"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/exporter-prometheus@0.222.0",
+      "type": "library",
+      "name": "@opentelemetry/exporter-prometheus",
+      "version": "0.222.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "OpenTelemetry Exporter Prometheus provides a metrics endpoint for Prometheus",
+      "purl": "pkg:npm/%40opentelemetry/exporter-prometheus@0.222.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/exporter-prometheus/-/exporter-prometheus-0.222.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/experimental/packages/opentelemetry-exporter-prometheus"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "23b9da9679c166b8654e08e5aac55e1232467100852b990a018564ed74f3fdc6ee6ef8f97ef8cb39a97f31a9f2d2d68717618890e5a67a0b1b43cbdb4098e116"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/exporter-trace-otlp-grpc@0.222.0",
+      "type": "library",
+      "name": "@opentelemetry/exporter-trace-otlp-grpc",
+      "version": "0.222.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "OpenTelemetry Collector Exporter allows user to send collected traces to the OpenTelemetry Collector",
+      "purl": "pkg:npm/%40opentelemetry/exporter-trace-otlp-grpc@0.222.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/exporter-trace-otlp-grpc/-/exporter-trace-otlp-grpc-0.222.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/experimental/packages/exporter-trace-otlp-grpc"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ba2b2295e3c474e31ade121f5d6f365d753a1687c5f20c378aff8fa1ba08316114042ed76c90775e720749dad20eca82c379e347f21fd3ca83d32cce63553d4a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/exporter-trace-otlp-http@0.222.0",
+      "type": "library",
+      "name": "@opentelemetry/exporter-trace-otlp-http",
+      "version": "0.222.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "OpenTelemetry Collector Trace Exporter allows user to send collected traces to the OpenTelemetry Collector",
+      "purl": "pkg:npm/%40opentelemetry/exporter-trace-otlp-http@0.222.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/exporter-trace-otlp-http/-/exporter-trace-otlp-http-0.222.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/experimental/packages/exporter-trace-otlp-http"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "4429cf59c1e9a708aab90f9c5779d6bcdc1d7f4306d70dba7b98dec16d93f379d364e95781c83cf2c63dba509581a8061dcab59a3d0bd063fa607833936bfca0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/exporter-trace-otlp-proto@0.222.0",
+      "type": "library",
+      "name": "@opentelemetry/exporter-trace-otlp-proto",
+      "version": "0.222.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "OpenTelemetry Collector Exporter allows user to send collected traces to the OpenTelemetry Collector using protobuf over HTTP",
+      "purl": "pkg:npm/%40opentelemetry/exporter-trace-otlp-proto@0.222.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/exporter-trace-otlp-proto/-/exporter-trace-otlp-proto-0.222.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/experimental/packages/exporter-trace-otlp-proto"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "8a62eb2f33619c0049b77b54c93eb787a32a7d9ac6dc676fdd313bf8e5104efc03d3cf117c2531deb174d657207eed8a5c1164d77bf08b4c8a64bbc511a96420"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/exporter-zipkin@2.11.0",
+      "type": "library",
+      "name": "@opentelemetry/exporter-zipkin",
+      "version": "2.11.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "OpenTelemetry Zipkin Exporter allows the user to send collected traces to Zipkin.",
+      "purl": "pkg:npm/%40opentelemetry/exporter-zipkin@2.11.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/exporter-zipkin/-/exporter-zipkin-2.11.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/packages/opentelemetry-exporter-zipkin"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "98589b038e725cb1044c88fe55c4d5c9c1457b847dd620f8d5dfabdc25347f70c35890ab202887c5422399805309922ecb05c478da3efb69677107969c7ee559"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/instrumentation@0.222.0",
+      "type": "library",
+      "name": "@opentelemetry/instrumentation",
+      "version": "0.222.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "Base class for node which OpenTelemetry instrumentation modules extend",
+      "purl": "pkg:npm/%40opentelemetry/instrumentation@0.222.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/instrumentation/-/instrumentation-0.222.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/open-telemetry/opentelemetry-js.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/experimental/packages/opentelemetry-instrumentation"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "7e16d10ee020ccf2a9ab5939fa15f7b92fb740060d71ad289f4360a2dfd1f1d0ec42db856800de6671b6b92831001baf708ed2da984069185b72df6389e78a67"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/otlp-exporter-base@0.222.0",
+      "type": "library",
+      "name": "@opentelemetry/otlp-exporter-base",
+      "version": "0.222.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "OpenTelemetry OTLP Exporter base (for internal use only)",
+      "purl": "pkg:npm/%40opentelemetry/otlp-exporter-base@0.222.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/otlp-exporter-base/-/otlp-exporter-base-0.222.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/experimental/packages/otlp-exporter-base"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "61bcb01b7bde126d856fa4db771464baab96a1be9e5565ee03cfc16b5b57cfd8c77d4aa9744de47a294e1c4b4f6e80b80af4b56e379e55f36458638eacb8fe97"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/otlp-grpc-exporter-base@0.222.0",
+      "type": "library",
+      "name": "@opentelemetry/otlp-grpc-exporter-base",
+      "version": "0.222.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "OpenTelemetry OTLP-gRPC Exporter base (for internal use only)",
+      "purl": "pkg:npm/%40opentelemetry/otlp-grpc-exporter-base@0.222.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/otlp-grpc-exporter-base/-/otlp-grpc-exporter-base-0.222.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/experimental/packages/otlp-grpc-exporter-base"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "2b0e56a830586290a063e79d1d6652fc9a776dd82ea8d902c8458eb2a1617fc466b5c12e598ccf140f62f8be94b0da095d3b3c9e079007a77010b1f57333588c"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/otlp-transformer@0.222.0",
+      "type": "library",
+      "name": "@opentelemetry/otlp-transformer",
+      "version": "0.222.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "Transform OpenTelemetry SDK data into OTLP",
+      "purl": "pkg:npm/%40opentelemetry/otlp-transformer@0.222.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/otlp-transformer/-/otlp-transformer-0.222.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/experimental/packages/otlp-transformer"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "fc5dc167cf7e089427664321dad0abb5c741f974f60f1863e05144f963d0fffe35de19852f4fd17c45fabe03885868624b3ae41d64cadfee92893ecae7f83f8d"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/propagator-b3@2.11.0",
+      "type": "library",
+      "name": "@opentelemetry/propagator-b3",
+      "version": "2.11.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "OpenTelemetry B3 propagator provides context propagation for systems that are using the B3 header format",
+      "purl": "pkg:npm/%40opentelemetry/propagator-b3@2.11.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/propagator-b3/-/propagator-b3-2.11.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/packages/opentelemetry-propagator-b3"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "95dc91657c7aaacaaef52a6a77bad5c68e92340509a8ff08af7bf0222e0df31c992d7365ff65de426207bc59de8953aa3705a453e246160d8ef7f4f57de7d4d3"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/propagator-jaeger@2.11.0",
+      "type": "library",
+      "name": "@opentelemetry/propagator-jaeger",
+      "version": "2.11.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "OpenTelemetry Jaeger propagator provides HTTP header propagation for systems that are using Jaeger HTTP header format.",
+      "purl": "pkg:npm/%40opentelemetry/propagator-jaeger@2.11.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/propagator-jaeger/-/propagator-jaeger-2.11.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/packages/opentelemetry-propagator-jaeger"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "4543aa82822a5ce3d04ce86906bb34ed8f2c065c55a0b6391646bab9e674a6b5be93a7d642c6dafe71c3638826fa099fbb0b51a9b5f963d60a843be4b636c8a9"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/resources@2.11.0",
+      "type": "library",
+      "name": "@opentelemetry/resources",
+      "version": "2.11.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "OpenTelemetry SDK resources",
+      "purl": "pkg:npm/%40opentelemetry/resources@2.11.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/resources/-/resources-2.11.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/packages/opentelemetry-resources"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "21eefef2af0c0c5e05004402295313c7745e52fc622008088a25b773d25d98ff3e1cc703cb6d29b93f801e37b19c4c609dbbc1c6343d7e39050d6ae2909da340"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/sdk-logs@0.222.0",
+      "type": "library",
+      "name": "@opentelemetry/sdk-logs",
+      "version": "0.222.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "OpenTelemetry logs SDK",
+      "purl": "pkg:npm/%40opentelemetry/sdk-logs@0.222.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/sdk-logs/-/sdk-logs-0.222.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/open-telemetry/opentelemetry-js.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/experimental/packages/sdk-logs"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "fb5f581ce0c88da50202bc6579a26dbae7c5655a73ff1bef2be565950a84f96f211e89717684701df2bfb3aebbcdecf0875864c7a14517ea18cdeb5882a2be06"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/sdk-metrics@2.11.0",
+      "type": "library",
+      "name": "@opentelemetry/sdk-metrics",
+      "version": "2.11.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "OpenTelemetry metrics SDK",
+      "purl": "pkg:npm/%40opentelemetry/sdk-metrics@2.11.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/sdk-metrics/-/sdk-metrics-2.11.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/packages/sdk-metrics"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ec65d770e6f21f20d45121be2fe909a2abadcb4d5bce6ee2bc4efe4928175c9707b8fcc6be2a6dc70011988d9cf9b9e7c637b11906c99f236537c1f104ffd8ec"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/sdk-node@0.222.0",
+      "type": "library",
+      "name": "@opentelemetry/sdk-node",
+      "version": "0.222.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "OpenTelemetry SDK for Node.js",
+      "purl": "pkg:npm/%40opentelemetry/sdk-node@0.222.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/sdk-node/-/sdk-node-0.222.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/experimental/packages/opentelemetry-sdk-node"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "b7cb6514dfdecd857b888e24eaededda315b211797f7d6748953154982c9b1c13831cc485bd6061e174e95d798d5e9477a8abc9a310ee01f6ce0593bfb325bb2"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/sdk-trace@2.11.0",
+      "type": "library",
+      "name": "@opentelemetry/sdk-trace",
+      "version": "2.11.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "OpenTelemetry Tracing",
+      "purl": "pkg:npm/%40opentelemetry/sdk-trace@2.11.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/sdk-trace/-/sdk-trace-2.11.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/packages/sdk-trace"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "7c59d3a869bcfc6ef7190567c588bb2d76b565560452f80be972352e9bd5d1b3c2ed643f64680ac424a5f059e56412ada3d2471c41533bab3a094a6fbedc05ac"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/sdk-trace-base@2.11.0",
+      "type": "library",
+      "name": "@opentelemetry/sdk-trace-base",
+      "version": "2.11.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "OpenTelemetry Tracing",
+      "purl": "pkg:npm/%40opentelemetry/sdk-trace-base@2.11.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/sdk-trace-base/-/sdk-trace-base-2.11.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/packages/opentelemetry-sdk-trace-base"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "1f5f71fd35ff2d976a8983a333b7eab52c70969942e6981e95abea6d07476e176ad2afc023f4c690cd9d7c6baeca74d79893de1761e8655a0f0eef931a85bbf0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/sdk-trace-node@2.11.0",
+      "type": "library",
+      "name": "@opentelemetry/sdk-trace-node",
+      "version": "2.11.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "OpenTelemetry Node SDK provides automatic telemetry (tracing, metrics, etc) for Node.js applications",
+      "purl": "pkg:npm/%40opentelemetry/sdk-trace-node@2.11.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/sdk-trace-node/-/sdk-trace-node-2.11.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/packages/opentelemetry-sdk-trace-node"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "0aebc2309999c6cc2134b94cd8b7ee2ce5b78777d9ba303886c1b807e4b3e1d5f6cef6973bc360ef87270c7583eb880bb334e58621b773488d5238f883ed3fb0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@opentelemetry/semantic-conventions@1.43.0",
+      "type": "library",
+      "name": "@opentelemetry/semantic-conventions",
+      "version": "1.43.0",
+      "scope": "required",
+      "author": "OpenTelemetry Authors",
+      "description": "OpenTelemetry semantic conventions",
+      "purl": "pkg:npm/%40opentelemetry/semantic-conventions@1.43.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@opentelemetry/semantic-conventions/-/semantic-conventions-1.43.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/open-telemetry/opentelemetry-js/tree/main/semantic-conventions"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "7926164e6eb6d2d4e4e3910a49e75a50bf0c15823c856d7ae21217b20207cb1bb75686d40777c50aee6dd2141bcba3a85913ec1b52a42941b633951a7622e256"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@pinojs/redact@0.4.0",
+      "type": "library",
+      "name": "@pinojs/redact",
+      "version": "0.4.0",
+      "scope": "required",
+      "author": "Matteo Collina <hello@matteocollina.com>",
+      "description": "Redact JS objects",
+      "purl": "pkg:npm/%40pinojs/redact@0.4.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@pinojs/redact/-/redact-0.4.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/pinojs/redact.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/pinojs/redact#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/pinojs/redact/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "93610d9e606e804febcd07c471d58770263efc533754bcc7f5c604b1b76ca2aaefcc029185465e44d84066f07c3a2b502754c179ddf2a96b5d8f34bac09281c2"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@types/trusted-types@2.0.7",
+      "type": "library",
+      "name": "@types/trusted-types",
+      "version": "2.0.7",
+      "scope": "optional",
+      "description": "TypeScript definitions for trusted-types",
+      "purl": "pkg:npm/%40types/trusted-types@2.0.7",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@types/trusted-types/-/trusted-types-2.0.7.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/trusted-types"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "49c68f767d5d41cce06e5d101537933a65471542eddfde17260390368c95859eabdaf2e730b25f04f779dd2079d93ff71b7e95235fe0d8c65a5f47300ee5ec7f"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "abstract-logging@2.0.1",
+      "type": "library",
+      "name": "abstract-logging",
+      "version": "2.0.1",
+      "scope": "required",
+      "author": "James Sumners <james.sumners@gmail.com>",
+      "description": "A noop logger that conforms to the Log4j interface for modules to stub out internal logging",
+      "purl": "pkg:npm/abstract-logging@2.0.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/abstract-logging/-/abstract-logging-2.0.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/jsumners/abstract-logging.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/jsumners/abstract-logging#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/jsumners/abstract-logging/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "d818d14d9c533ef85e3af19b06c94549839492bf928cfb4e9eb2cfdf77fe54858bcdecd0a5972a560ee36b72f87415e6cf38304fe6b4dbd8d1c793c28b726e88"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "ajv-formats@3.0.1",
+      "type": "library",
+      "name": "ajv-formats",
+      "version": "3.0.1",
+      "scope": "required",
+      "author": "Evgeny Poberezkin",
+      "description": "Format validation for Ajv v7+",
+      "purl": "pkg:npm/ajv-formats@3.0.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/ajv-formats/-/ajv-formats-3.0.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/ajv-validator/ajv-formats.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/ajv-validator/ajv-formats#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/ajv-validator/ajv-formats/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "f2252a979d04511fae51c7514371c3a9ae84572a3776870bf20e5627714d7169aeeb621b90652e7bfa44c8b056f1518a2ae7133e0a9e92ce1f214d43038ca8c1"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "atomic-sleep@1.0.0",
+      "type": "library",
+      "name": "atomic-sleep",
+      "version": "1.0.0",
+      "scope": "required",
+      "author": "David Mark Clements (@davidmarkclem)",
+      "description": "Zero CPU overhead, zero dependency, true event-loop blocking sleep",
+      "purl": "pkg:npm/atomic-sleep@1.0.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/atomic-sleep/-/atomic-sleep-1.0.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/davidmarkclements/atomic-sleep.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/davidmarkclements/atomic-sleep#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/davidmarkclements/atomic-sleep/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "90d3a30ea021ee9c745d6348fb841bce8891fe74e41c058db9ddaebe726ab83d7fc796bb11064c253d00733a8ad109faee863f4d34352db50a6a3669a7723db5"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "avvio@9.3.0",
+      "type": "library",
+      "name": "avvio",
+      "version": "9.3.0",
+      "scope": "required",
+      "author": "Matteo Collina <hello@matteocollina.com>",
+      "description": "Asynchronous bootstrapping of Node applications",
+      "purl": "pkg:npm/avvio@9.3.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/avvio/-/avvio-9.3.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/fastify/avvio.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/fastify/avvio#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/fastify/avvio/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "836b50ecb13ba0e4aa0dfc049b733e64231325ceca89909d278530c9925be5c9132b262ee743989afbf49821573ee617a0ce33912b7ccccf5743d282bf103be0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "cjs-module-lexer@2.2.1",
+      "type": "library",
+      "name": "cjs-module-lexer",
+      "version": "2.2.1",
+      "scope": "required",
+      "author": "Guy Bedford",
+      "description": "Lexes CommonJS modules, returning their named exports metadata",
+      "purl": "pkg:npm/cjs-module-lexer@2.2.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/cjs-module-lexer/-/cjs-module-lexer-2.2.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/nodejs/cjs-module-lexer.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/nodejs/cjs-module-lexer#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/nodejs/cjs-module-lexer/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "09af2cc2284cfbfe3229e7181d8e7692025ddf4d218b69400d4fdad51c4d4d17be449f63bea425112a5bcfd0e71bd9a8c1ecfcab05c707ca98748530f5ef85e5"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "cookie@1.1.1",
+      "type": "library",
+      "name": "cookie",
+      "version": "1.1.1",
+      "scope": "required",
+      "author": "Roman Shtylman <shtylman@gmail.com>",
+      "description": "HTTP server cookie parsing and serialization",
+      "purl": "pkg:npm/cookie@1.1.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/cookie/-/cookie-1.1.1.tgz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "7a2f00a2cee36b4c1e469173267100f541c9ffb5d09aa8256d1c277f60138dc07d5aaf3be15287f647e38e2acce94854dbf1397c561a77297284595d72a4a275"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "dequal@2.0.3",
+      "type": "library",
+      "name": "dequal",
+      "version": "2.0.3",
+      "scope": "required",
+      "author": "Luke Edwards",
+      "description": "A tiny (304B to 489B) utility for check for deep equality",
+      "purl": "pkg:npm/dequal@2.0.3",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/dequal/-/dequal-2.0.3.tgz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "d237bea8f28710ca21bdf453084a370ab3c6e9c033018826ccacb1462612483912e9e1897725499bb59a600e4409a003f702c1d93e0411eca603968555c61708"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "dompurify@3.4.15",
+      "type": "library",
+      "name": "dompurify",
+      "version": "3.4.15",
+      "scope": "required",
+      "author": "Dr.-Ing. Mario Heiderich, Cure53 <mario@cure53.de> (https://cure53.de/)",
+      "description": "DOMPurify is a DOM-only, super-fast, uber-tolerant XSS sanitizer for HTML, MathML and SVG. It runs as JavaScript and works in all modern browsers, as well as in Node.js (via jsdom). DOMPurify is written by security people who have vast background in web attacks and XSS. Fear not.",
+      "purl": "pkg:npm/dompurify@3.4.15",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/dompurify/-/dompurify-3.4.15.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git://github.com/cure53/DOMPurify.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/cure53/DOMPurify"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/cure53/DOMPurify/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "11406333e07e9640c4e35884f360c34827e4a0f19f5f1f08c45c4f3233739bf524e310deb7beeb4cdf70aa5c65560ef590aed71ae50cbfac14c49530c2ff97cb"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "(MPL-2.0 OR Apache-2.0)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "duplexify@4.1.3",
+      "type": "library",
+      "name": "duplexify",
+      "version": "4.1.3",
+      "scope": "required",
+      "author": "Mathias Buus",
+      "description": "Turn a writable and readable stream into a streams2 duplex stream with support for async initialization and streams1/streams2 input",
+      "purl": "pkg:npm/duplexify@4.1.3",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/duplexify/-/duplexify-4.1.3.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git://github.com/mafintosh/duplexify"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/mafintosh/duplexify"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/mafintosh/duplexify/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "337066061c09459b12c77f25672844e770ac75d83397947bc4624d93b09575d643e82726c0c087f09fbb029ac8ad0287ed3a272b16828dcbf6ed099ffac43ea0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "fast-decode-uri-component@1.0.1",
+      "type": "library",
+      "name": "fast-decode-uri-component",
+      "version": "1.0.1",
+      "scope": "required",
+      "author": "Tomas Della Vedova - @delvedor (http://delved.org)",
+      "description": "Fast and safe decodeURIComponent",
+      "purl": "pkg:npm/fast-decode-uri-component@1.0.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/fast-decode-uri-component/-/fast-decode-uri-component-1.0.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/delvedor/fast-decode-uri-component.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/delvedor/fast-decode-uri-component#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/delvedor/fast-decode-uri-component/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "58a80a5a0e5e531bd1646c16f05bdf6da1fb0174a1d9c2fede3e5f306cd4302c56049ddd5776bb5b3f32d9ffee4347b707a5a6a1d0f7a12e788d343d1d54c822"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "fast-json-stringify@7.0.1",
+      "type": "library",
+      "name": "fast-json-stringify",
+      "version": "7.0.1",
+      "scope": "required",
+      "author": "Matteo Collina <hello@matteocollina.com>",
+      "description": "Stringify your JSON at max speed",
+      "purl": "pkg:npm/fast-json-stringify@7.0.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/fast-json-stringify/-/fast-json-stringify-7.0.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/fastify/fast-json-stringify.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/fastify/fast-json-stringify#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/fastify/fast-json-stringify/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "79149ac804526dbc25063a4fe2f9d34c8443e503dc22b9a284fc4378dd43b4a9c73e0eba52e24bc7ef2194ad64685763bf3c90fddcc02e88b8bf0010f93fa264"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "fast-querystring@1.1.2",
+      "type": "library",
+      "name": "fast-querystring",
+      "version": "1.1.2",
+      "scope": "required",
+      "author": "Yagiz Nizipli <yagiz@nizipli.com>",
+      "description": "A fast alternative to legacy querystring module",
+      "purl": "pkg:npm/fast-querystring@1.1.2",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/fast-querystring/-/fast-querystring-1.1.2.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/anonrig/fast-querystring.git"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "83a2ae2969855dcd1f203f16587d238ade20d00181a0984290931bd5199bb1211436f43e642f03e82519f86b45f2733348f5e786278fcb2aaa8a9ccd3449c78e"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "fastify@5.12.3",
+      "type": "library",
+      "name": "fastify",
+      "version": "5.12.3",
+      "scope": "required",
+      "author": "Matteo Collina <hello@matteocollina.com>",
+      "description": "Fast and low overhead web framework, for Node.js",
+      "purl": "pkg:npm/fastify@5.12.3",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/fastify/-/fastify-5.12.3.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/fastify/fastify.git"
+        },
+        {
+          "type": "website",
+          "url": "https://fastify.dev/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/fastify/fastify/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ade67cc1c7b954d09cb9f22df4056dcd96b72f8bb58fc7ac8a49fb38480758b5694692f947b636f97ce3ef439492fe730dfcd40315d94fa72ee11b74cebdc428"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "fastify-plugin@6.0.0",
+      "type": "library",
+      "name": "fastify-plugin",
+      "version": "6.0.0",
+      "scope": "required",
+      "author": "Tomas Della Vedova - @delvedor (http://delved.org)",
+      "description": "Plugin helper for Fastify",
+      "purl": "pkg:npm/fastify-plugin@6.0.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/fastify-plugin/-/fastify-plugin-6.0.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/fastify/fastify-plugin.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/fastify/fastify-plugin#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/fastify/fastify-plugin/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "7d93adcbbcf73bbbce96217a77c6c7137c22121d4a70d9ca1107a7b1281393d0b50ef37a9d12d2fbe5d577ceafdf71f0ffcbbd527f00d730eb43cba37100c712"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "semver@7.8.5",
+      "type": "library",
+      "name": "semver",
+      "version": "7.8.5",
+      "scope": "required",
+      "author": "GitHub Inc.",
+      "description": "The semantic version parser used by npm.",
+      "purl": "pkg:npm/semver@7.8.5",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/semver/-/semver-7.8.5.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/npm/node-semver.git"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "63bfca0ec6fc2e3a28669c1aa86cae94ee8342592c8029dc7211c693eb19218e1206f52870c044147e54af57c8e1d57e26f974c3a723bee71a222e34a6e462a0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "fastq@1.20.3",
+      "type": "library",
+      "name": "fastq",
+      "version": "1.20.3",
+      "scope": "required",
+      "author": "Matteo Collina <hello@matteocollina.com>",
+      "description": "Fast, in memory work queue",
+      "purl": "pkg:npm/fastq@1.20.3",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/fastq/-/fastq-1.20.3.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/mcollina/fastq.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/mcollina/fastq#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/mcollina/fastq/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "5cabf99e72ecea72c5ef536088a24b21914b90fc8812e3ac7a52c6eee8d99c6ad17d02bc1e9bd8f96a8a84025401d2e89b054712b552e0b7f11653ead3f15303"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "find-my-way@9.9.0",
+      "type": "library",
+      "name": "find-my-way",
+      "version": "9.9.0",
+      "scope": "required",
+      "author": "Tomas Della Vedova - @delvedor (http://delved.org)",
+      "description": "Crazy fast http radix based router",
+      "purl": "pkg:npm/find-my-way@9.9.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/find-my-way/-/find-my-way-9.9.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/delvedor/find-my-way.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/delvedor/find-my-way#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/delvedor/find-my-way/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "b09b20675b101f6503ba8c0fb8c2a0f1acfb41cf05d239e3f922a415653ff93d31705960579b2481738652a990cce7665ba00b03b021248356c77a850646cb1c"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "import-in-the-middle@3.4.0",
+      "type": "library",
+      "name": "import-in-the-middle",
+      "version": "3.4.0",
+      "scope": "required",
+      "author": "Bryan English <bryan.english@datadoghq.com>",
+      "description": "Intercept imports in Node.js",
+      "purl": "pkg:npm/import-in-the-middle@3.4.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/import-in-the-middle/-/import-in-the-middle-3.4.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+ssh://git@github.com/nodejs/import-in-the-middle.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/nodejs/import-in-the-middle#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/nodejs/import-in-the-middle/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "5df8f07daae17be2c69a86a87feb1ec5e368dec191cac6f9c79e96ad92f01ed9aa4f43a29522ad55692fd25ac270c8122b228ff68068801022b0766fb491f46b"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "ip-address@10.7.0",
+      "type": "library",
+      "name": "ip-address",
+      "version": "10.7.0",
+      "scope": "required",
+      "author": "Beau Gunderson <beau@beaugunderson.com> (https://beaugunderson.com/)",
+      "description": "A library for parsing IPv4 and IPv6 IP addresses in node and the browser.",
+      "purl": "pkg:npm/ip-address@10.7.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/ip-address/-/ip-address-10.7.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/beaugunderson/ip-address.git"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "04616cc897799a95e9deb2ba8c87400cb360a4950ad639e3cef605f252be5720da6fd2409aa37460e28374fd7b1e580a6f6f9e84f80373c12d9d12db18200c84"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "ipaddr.js@2.5.0",
+      "type": "library",
+      "name": "ipaddr.js",
+      "version": "2.5.0",
+      "scope": "required",
+      "author": "whitequark <whitequark@whitequark.org>",
+      "description": "A library for manipulating IPv4 and IPv6 addresses in JavaScript.",
+      "purl": "pkg:npm/ipaddr.js@2.5.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/ipaddr.js/-/ipaddr.js-2.5.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/whitequark/ipaddr.js.git"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "6aafade4d01cf9c4baad94105560b6c7df023ea1ad28a4cc0dde066a876fd304a19c8b5d2a0ff9d5d8e4189d61a87f8ecb48af0dfb426d22c24286fcceca34d7"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "json-schema-ref-resolver@3.0.0",
+      "type": "library",
+      "name": "json-schema-ref-resolver",
+      "version": "3.0.0",
+      "scope": "required",
+      "author": "Ivan Tymoshenko <ivan@tymoshenko.me>",
+      "description": "JSON schema reference resolver",
+      "purl": "pkg:npm/json-schema-ref-resolver@3.0.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/json-schema-ref-resolver/-/json-schema-ref-resolver-3.0.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/fastify/json-schema-ref-resolver.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/fastify/json-schema-ref-resolver#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/fastify/json-schema-ref-resolver/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "84ead92152f98f26058f393bfb2ee7e490f31a553cadf583b98c87c066b6580f3fa5c98c1dece9db1b15c31ade6c3fd0f6df0d7390dba227b2483a42a78586e0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "json-schema-resolver@3.0.0",
+      "type": "library",
+      "name": "json-schema-resolver",
+      "version": "3.0.0",
+      "scope": "required",
+      "author": "Manuel Spigolon <behemoth89@gmail.com> (https://github.com/Eomm)",
+      "description": "Resolve all your $refs",
+      "purl": "pkg:npm/json-schema-resolver@3.0.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/json-schema-resolver/-/json-schema-resolver-3.0.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/Eomm/json-schema-resolver.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/Eomm/json-schema-resolver#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/Eomm/json-schema-resolver/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "1ea3276f3d2dcf60da109de7b6caadc777b3cd9c8313b1b9e80fe93d8fcd1a6acfbbbe94cec5aab8ea4715101fe5b793357a07d8b53971078f56f4658b59dc84"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "light-my-request@6.6.0",
+      "type": "library",
+      "name": "light-my-request",
+      "version": "6.6.0",
+      "scope": "required",
+      "author": "Tomas Della Vedova - @delvedor (http://delved.org)",
+      "description": "Fake HTTP injection library",
+      "purl": "pkg:npm/light-my-request@6.6.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/light-my-request/-/light-my-request-6.6.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/fastify/light-my-request.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/fastify/light-my-request#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/fastify/light-my-request/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "08761bbbc46d6e8488a15b0767a61ee1c8f8030ff2836a001629a517b98dbdf0d5d7dd8b47b9c388ab5221f0ae2d3ecaa243d24e7ffd91f54b9b9386374036f0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "process-warning@4.0.1",
+      "type": "library",
+      "name": "process-warning",
+      "version": "4.0.1",
+      "scope": "required",
+      "author": "Tomas Della Vedova",
+      "description": "A small utility for creating warnings and emitting them.",
+      "purl": "pkg:npm/process-warning@4.0.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/process-warning/-/process-warning-4.0.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/fastify/process-warning.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/fastify/fastify-warning#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/fastify/fastify-warning/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ddcd8bcd0deb63d77485cd5e99cb0785f4fd270cf47028626ff40df3da0c136478e75c397f2ddfd1a7c0844445640c2b6c3538df0935d9dd0e441a4354c139d1"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "lucide-react@1.41.0",
+      "type": "library",
+      "name": "lucide-react",
+      "version": "1.41.0",
+      "scope": "required",
+      "author": "Eric Fennis",
+      "description": "A Lucide icon library package for React applications.",
+      "purl": "pkg:npm/lucide-react@1.41.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/lucide-react/-/lucide-react-1.41.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/lucide-icons/lucide.git"
+        },
+        {
+          "type": "website",
+          "url": "https://lucide.dev"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ea592c3f7e65e8ab330ca51e4538b82d5ee2e8311ed18ce5d802c99bd8f8739c4460df7519d5b5c46b1ac0630e8369a08c5e461c1557f29297f643fe716b0fdd"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "marked@14.0.0",
+      "type": "library",
+      "name": "marked",
+      "version": "14.0.0",
+      "scope": "required",
+      "author": "Christopher Jeffrey",
+      "description": "A markdown parser built for speed",
+      "purl": "pkg:npm/marked@14.0.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/marked/-/marked-14.0.0.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://marked.js.org"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "http://github.com/markedjs/marked/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "b888f8f9f690f8c807830516d65d8fb0f82564b38b393d6e12bb74e9d00fb71da48ed78b0246ec77fd0589883f3064be8bb64a2dbef0d960a5c4793338ebabc9"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "module-details-from-path@1.0.4",
+      "type": "library",
+      "name": "module-details-from-path",
+      "version": "1.0.4",
+      "scope": "required",
+      "author": "Thomas Watson <w@tson.dk> (https://wa.tson.dk/)",
+      "description": "Resolve npm package details, like name and base path, given an absolute path to a file inside a package",
+      "purl": "pkg:npm/module-details-from-path@1.0.4",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/module-details-from-path/-/module-details-from-path-1.0.4.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/watson/module-details-from-path.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/watson/module-details-from-path#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/watson/module-details-from-path/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "10658a83100b18c833bf1605d54c864f2d075d7ff6bc72e4c3af8dbc3296da3ca959b1e98d0ba3e1431ca905971c444985518a8a4a254f4e86ddb70a7b87e2ef"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "monaco-editor@0.56.0",
+      "type": "library",
+      "name": "monaco-editor",
+      "version": "0.56.0",
+      "scope": "required",
+      "author": "Microsoft Corporation",
+      "description": "A browser based code editor",
+      "purl": "pkg:npm/monaco-editor@0.56.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/monaco-editor/-/monaco-editor-0.56.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/microsoft/monaco-editor"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/microsoft/monaco-editor"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "b176e8466dc178178b9bddfc79a8b22cc7b43b1cdf5c8959bdbbf88abfe3560432d730e15a38269f2d16a0de397ee0ca842090b1831b049aeffc0ea377c68252"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "on-exit-leak-free@2.1.2",
+      "type": "library",
+      "name": "on-exit-leak-free",
+      "version": "2.1.2",
+      "scope": "required",
+      "author": "Matteo Collina <hello@matteocollina.com>",
+      "description": "Execute a function on exit without leaking memory, allowing all objects to be garbage collected",
+      "purl": "pkg:npm/on-exit-leak-free@2.1.2",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/on-exit-leak-free/-/on-exit-leak-free-2.1.2.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/mcollina/on-exit-or-gc.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/mcollina/on-exit-or-gc#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/mcollina/on-exit-or-gc/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "d1e24963a8572c67f5b9d1f07cd7ed06a1fe83bdc4538079d389d978aa73d6c61129a7c0821c31109ba70763bbac36642f83c67ec3159d35d9d848e26dba9cb0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "openapi-types@12.1.3",
+      "type": "library",
+      "name": "openapi-types",
+      "version": "12.1.3",
+      "scope": "required",
+      "author": "Joseph Spencer",
+      "description": "Types for OpenAPI documents.",
+      "purl": "pkg:npm/openapi-types@12.1.3",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/openapi-types/-/openapi-types-12.1.3.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/kogosoftwarellc/open-api/tree/master/packages/openapi-types#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/kogosoftwarellc/open-api/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+label%3Aopenapi-types"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "37862d49826a82156ee227a4d9952f70dff46aa1f59110ee36acdcc9c0f184e52983b19dbcb6b61770e04bac8136122786fdabffa234165927ec2a8bf3e9c873"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "pino@10.3.1",
+      "type": "library",
+      "name": "pino",
+      "version": "10.3.1",
+      "scope": "required",
+      "author": "Matteo Collina <hello@matteocollina.com>",
+      "description": "super fast, all natural json logger",
+      "purl": "pkg:npm/pino@10.3.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/pino/-/pino-10.3.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/pinojs/pino.git"
+        },
+        {
+          "type": "website",
+          "url": "https://getpino.io"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/pinojs/pino/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "af7e321ff1a54292996d4d41bc516a3a3848491a3530dc75b5662c62f9a3e8a2111d23cc4f6fb21ce11bd521ba34cbd1a07445d1ad3b9023a8c7ff726a4975be"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "pino-abstract-transport@3.0.0",
+      "type": "library",
+      "name": "pino-abstract-transport",
+      "version": "3.0.0",
+      "scope": "required",
+      "author": "Matteo Collina <hello@matteocollina.com>",
+      "description": "Write Pino transports easily",
+      "purl": "pkg:npm/pino-abstract-transport@3.0.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/pino-abstract-transport/-/pino-abstract-transport-3.0.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/pinojs/pino-abstract-transport.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/pinojs/pino-abstract-transport#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/pinojs/pino-abstract-transport/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "c257d473353e9fb1f2fc76b98fd6bf819372ed67b9f9c5e9f182fe5fe3c6f12d0a5f1c3b9ff257037738e98d334339c827cdd44498b0cbb2e1e7a58ba2436ec6"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "pino-std-serializers@7.1.0",
+      "type": "library",
+      "name": "pino-std-serializers",
+      "version": "7.1.0",
+      "scope": "required",
+      "author": "James Sumners <james.sumners@gmail.com>",
+      "description": "A collection of standard object serializers for Pino",
+      "purl": "pkg:npm/pino-std-serializers@7.1.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/pino-std-serializers/-/pino-std-serializers-7.1.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+ssh://git@github.com/pinojs/pino-std-serializers.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/pinojs/pino-std-serializers#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/pinojs/pino-std-serializers/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "06774f1faeff271184c518225f5757d30d45bd9724e566b869a97dd7df12ad18598c7dc6c4a4142880676094dd8f61c3377510012d3a1e57dc49b423d8e1e66b"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "process-warning@5.1.0",
+      "type": "library",
+      "name": "process-warning",
+      "version": "5.1.0",
+      "scope": "required",
+      "author": "Tomas Della Vedova",
+      "description": "A small utility for creating warnings and emitting them.",
+      "purl": "pkg:npm/process-warning@5.1.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/process-warning/-/process-warning-5.1.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/fastify/process-warning.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/fastify/fastify-warning#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/fastify/fastify-warning/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "8d049a547b0f82dcb0eb47b5ad0fc0fbf02b3c48ff4bca52fef167c866bf818157aca93fe91b83928a950d0e4d2393264b4d7af7c96d9409343680c134bba347"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "quick-format-unescaped@4.0.4",
+      "type": "library",
+      "name": "quick-format-unescaped",
+      "version": "4.0.4",
+      "scope": "required",
+      "author": "David Mark Clements",
+      "description": "Solves a problem with util.format",
+      "purl": "pkg:npm/quick-format-unescaped@4.0.4",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/quick-format-unescaped/-/quick-format-unescaped-4.0.4.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/davidmarkclements/quick-format.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/davidmarkclements/quick-format#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/davidmarkclements/quick-format/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "b580b5435860c91b87825a15fd85ecdb0d79ba73d587ca9fbbfa824df85361a99ac3b7f286e98a6b6c86a5d4a8f3bbd8df6ac87258fee1f59841750cb3d107be"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "react@19.2.8",
+      "type": "library",
+      "name": "react",
+      "version": "19.2.8",
+      "scope": "required",
+      "description": "React is a JavaScript library for building user interfaces.",
+      "purl": "pkg:npm/react@19.2.8",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/react/-/react-19.2.8.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/react/react.git"
+        },
+        {
+          "type": "website",
+          "url": "https://react.dev/"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "3d66980352ffabdbb6bbbc58422f98dcbdd87e789eed7c8b79a248095d4c183e8ba6bb01c5c02a1a3632af4798de9f9076c03ec7f22b92de1089ff03eb7f926f"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "react-dom@19.2.8",
+      "type": "library",
+      "name": "react-dom",
+      "version": "19.2.8",
+      "scope": "required",
+      "description": "React package for working with the DOM.",
+      "purl": "pkg:npm/react-dom@19.2.8",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/react-dom/-/react-dom-19.2.8.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/react/react.git"
+        },
+        {
+          "type": "website",
+          "url": "https://react.dev/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/react/react/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ad5a6b8a67c6046dc347e4ead08406d834f93f12ad8755881839a3e723e6973af86017bbbb213e0eee2856a4c35d948718619746d4c910649278fc9008c06095"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "readable-stream@3.6.2",
+      "type": "library",
+      "name": "readable-stream",
+      "version": "3.6.2",
+      "scope": "required",
+      "description": "Streams3, a user-land copy of the stream library from Node.js",
+      "purl": "pkg:npm/readable-stream@3.6.2",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.2.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git://github.com/nodejs/readable-stream"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "f6efec9e20ab6370f959db04447cc71381b66025eaa06e454c7522082e1221bafa5dc2d9058d39c9af442a361e93d3b9c4e0308c6abed497460404bb43d49ca0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "real-require@0.2.0",
+      "type": "library",
+      "name": "real-require",
+      "version": "0.2.0",
+      "scope": "required",
+      "author": "Paolo Insogna <shogun@cowtech.it>",
+      "description": "Keep require and import consistent after bundling or transpiling",
+      "purl": "pkg:npm/real-require@0.2.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/real-require/-/real-require-0.2.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/pinojs/real-require.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/pinojs/real-require"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/pinojs/real-require/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "e7b7ebac633f3824cba8b3808749a1540f5504c1ddfbd53b65bd931cc19d054a1954eb466c9ce3c6c6060c9dc0f4061808fe219facb54d56da39fcd6b66e4616"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "require-in-the-middle@8.0.1",
+      "type": "library",
+      "name": "require-in-the-middle",
+      "version": "8.0.1",
+      "scope": "required",
+      "author": "Thomas Watson Steen <w@tson.dk> (https://twitter.com/wa7son)",
+      "description": "Module to hook into the Node.js require function",
+      "purl": "pkg:npm/require-in-the-middle@8.0.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/require-in-the-middle/-/require-in-the-middle-8.0.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/nodejs/require-in-the-middle.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/nodejs/require-in-the-middle#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/nodejs/require-in-the-middle/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "413ec554c5df58e6056de44117a9eef88eadaf64dfdeed2af112048cda1bfe178a63f9e1eddac3fe4ede78c1664908274ed0b32c3702bbf5c49e95b6c24e3109"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "ret@0.5.0",
+      "type": "library",
+      "name": "ret",
+      "version": "0.5.0",
+      "scope": "required",
+      "author": "fent <fentbox@gmail.com> (https://github.com/fent)",
+      "description": "Tokenizes a string that represents a regular expression.",
+      "purl": "pkg:npm/ret@0.5.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/ret/-/ret-0.5.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git://github.com/fent/ret.js.git"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "2355f1ad9490fa812b9114788d86c0c8412ed88d1abc1bef30ce4937ee84069ace1910aceb710da99def8dabeaf1f070dbeeb61b92c5e577a52b0b89a5cbdcc7"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "reusify@1.1.0",
+      "type": "library",
+      "name": "reusify",
+      "version": "1.1.0",
+      "scope": "required",
+      "author": "Matteo Collina <hello@matteocollina.com>",
+      "description": "Reuse objects and functions with style",
+      "purl": "pkg:npm/reusify@1.1.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/reusify/-/reusify-1.1.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/mcollina/reusify.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/mcollina/reusify#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/mcollina/reusify/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "83a4147dfd38a19a47b34786e69f37ac52e11de574d2e83f61ff6764ce9f2de52b3e0b814e44d039da40596b29321e794d97d54033da37735025f6d5440c5d23"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "rfdc@1.4.1",
+      "type": "library",
+      "name": "rfdc",
+      "version": "1.4.1",
+      "scope": "required",
+      "author": "David Mark Clements <david.clements@nearform.com>",
+      "description": "Really Fast Deep Clone",
+      "purl": "pkg:npm/rfdc@1.4.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/rfdc/-/rfdc-1.4.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/davidmarkclements/rfdc.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/davidmarkclements/rfdc#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/davidmarkclements/rfdc/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ab56f737942445459497b8b2ca569a8f790ea484f43768bd32a2044173fbdc656c37d730ddf771f17eb77049968491a2d8f3c2176dc88e9ee4b66777f6b6b020"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "safe-buffer@5.2.1",
+      "type": "library",
+      "name": "safe-buffer",
+      "version": "5.2.1",
+      "scope": "required",
+      "author": "Feross Aboukhadijeh",
+      "description": "Safer Node.js Buffer API",
+      "purl": "pkg:npm/safe-buffer@5.2.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git://github.com/feross/safe-buffer.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/feross/safe-buffer"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/feross/safe-buffer/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ae9dd2a34eca71d9a629b1af81a37141226bedb1954959394bd12ad45fa9a5b468ef4f9879a0f1930e4377c34f37e183e9b8e7626d95b8fb825e6a6e62f9825d"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "safe-regex2@5.1.1",
+      "type": "library",
+      "name": "safe-regex2",
+      "version": "5.1.1",
+      "scope": "required",
+      "author": "James Halliday",
+      "description": "detect possibly catastrophic, exponential-time regular expressions",
+      "purl": "pkg:npm/safe-regex2@5.1.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/safe-regex2/-/safe-regex2-5.1.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git://github.com/fastify/safe-regex2.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/fastify/safe-regex2"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/fastify/safe-regex2/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "98e481bc718364cb8811931d3b3fda0846030afd04ee77dc36c221505fbf3fec42ec7c9fdc592fca6aa03db83d0f511d486bbeb8a6c9832d3d2bf44a29cee424"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "safe-stable-stringify@2.5.0",
+      "type": "library",
+      "name": "safe-stable-stringify",
+      "version": "2.5.0",
+      "scope": "required",
+      "author": "Ruben Bridgewater",
+      "description": "Deterministic and safely JSON.stringify to quickly serialize JavaScript objects",
+      "purl": "pkg:npm/safe-stable-stringify@2.5.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/safe-stable-stringify/-/safe-stable-stringify-2.5.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/BridgeAR/safe-stable-stringify.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/BridgeAR/safe-stable-stringify#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/BridgeAR/safe-stable-stringify/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "6f7ae9a532a6f53f8fb1508110e511e3a19623b7dd3acd3454a675fbd7351160da0ccbe341cead530b85c88a6b806813716a151d22ab53c1f7d591c0d9ed111c"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "scheduler@0.27.0",
+      "type": "library",
+      "name": "scheduler",
+      "version": "0.27.0",
+      "scope": "required",
+      "description": "Cooperative scheduler for the browser environment.",
+      "purl": "pkg:npm/scheduler@0.27.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/scheduler/-/scheduler-0.27.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/facebook/react.git"
+        },
+        {
+          "type": "website",
+          "url": "https://react.dev/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/facebook/react/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "78dbfe5ab55b2aed5fdef6d8253ff1b62179b320391cf20cb5ff48818fe72a0d2c5aacc0504bea63fc66ece71973fa9a7cbc7f88ef4580e99e480a78bf9b62fd"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "secure-json-parse@4.1.0",
+      "type": "library",
+      "name": "secure-json-parse",
+      "version": "4.1.0",
+      "scope": "required",
+      "author": "Eran Hammer <eran@sideway.com>",
+      "description": "JSON parse with prototype poisoning protection",
+      "purl": "pkg:npm/secure-json-parse@4.1.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/secure-json-parse/-/secure-json-parse-4.1.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/fastify/secure-json-parse.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/fastify/secure-json-parse#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/fastify/secure-json-parse/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "9782a761f132a982710f094d57245f3b61383531df30a016754b80f09d32bded83cff13f3dd05ea58d3746fc89a6cb08a51170268083e79c00fa6103b3a07258"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-3-Clause"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "set-cookie-parser@2.7.2",
+      "type": "library",
+      "name": "set-cookie-parser",
+      "version": "2.7.2",
+      "scope": "required",
+      "author": "Nathan Friedly",
+      "description": "Parses set-cookie headers into objects",
+      "purl": "pkg:npm/set-cookie-parser@2.7.2",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/set-cookie-parser/-/set-cookie-parser-2.7.2.tgz"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/nfriedly/set-cookie-parser"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "a1e33596953f52f853c70fa0ddc21fc571f225173fba275ddf22b53f6e368331ddb34b9d401633b37cbc8f8802096f9927b69dd3272d95df1160ef9b76eae5bf"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "sonic-boom@4.2.1",
+      "type": "library",
+      "name": "sonic-boom",
+      "version": "4.2.1",
+      "scope": "required",
+      "author": "Matteo Collina <hello@matteocollina.com>",
+      "description": "Extremely fast utf8 only stream implementation",
+      "purl": "pkg:npm/sonic-boom@4.2.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/sonic-boom/-/sonic-boom-4.2.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/pinojs/sonic-boom.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/pinojs/sonic-boom#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/pinojs/sonic-boom/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "c3a031b6e6d76b6c135c052c64c316111aec21101dacad1273e154cad5af60084124bcae238965acc202d43b65352748f7d108f3a299ba6d8c32adc4019945f5"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "state-local@1.0.7",
+      "type": "library",
+      "name": "state-local",
+      "version": "1.0.7",
+      "scope": "required",
+      "author": "Suren Atoyan <contact@surenatoyan.com>",
+      "description": "Tiny, simple, and robust technique for defining and acting with local states",
+      "purl": "pkg:npm/state-local@1.0.7",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/state-local/-/state-local-1.0.7.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/suren-atoyan/state-local"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/suren-atoyan/state-local#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/suren-atoyan/state-local/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "1d310730d89e6a4127a1edf7b21058719ecd5fcdc00948c2bbc738d22386119b27823f7346792a4bd8f5a6a40f5f0a1b07465c553936ed111bec2390d14479f7"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "stream-shift@1.0.3",
+      "type": "library",
+      "name": "stream-shift",
+      "version": "1.0.3",
+      "scope": "required",
+      "author": "Mathias Buus (@mafintosh)",
+      "description": "Returns the next buffer/object in a stream's readable queue",
+      "purl": "pkg:npm/stream-shift@1.0.3",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/stream-shift/-/stream-shift-1.0.3.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/mafintosh/stream-shift.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/mafintosh/stream-shift"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/mafintosh/stream-shift/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "efa3914740ced68d6194ac136e2fc33371175867f764960ef1c5d7e512709ee9760c4836a32a19ca32cda1033c5acbd988528245f0b53b427b882be27b745999"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "string_decoder@1.3.0",
+      "type": "library",
+      "name": "string_decoder",
+      "version": "1.3.0",
+      "scope": "required",
+      "description": "The string_decoder module from Node core",
+      "purl": "pkg:npm/string_decoder@1.3.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/string_decoder/-/string_decoder-1.3.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git://github.com/nodejs/string_decoder.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/nodejs/string_decoder"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "864457f14d568c915df0bb03276c90ff0596c5aa2912c0015355df90cf00fa3d3ef392401a9a6dd7a72bd56860e8a21b6f8a2453a32a97a04e8febaea7fc0a78"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "thread-stream@4.2.0",
+      "type": "library",
+      "name": "thread-stream",
+      "version": "4.2.0",
+      "scope": "required",
+      "author": "Matteo Collina <hello@matteocollina.com>",
+      "description": "A streaming way to send data to a Node.js Worker Thread",
+      "purl": "pkg:npm/thread-stream@4.2.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/thread-stream/-/thread-stream-4.2.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/mcollina/thread-stream.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/mcollina/thread-stream#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/mcollina/thread-stream/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "7b6cd9f7ac120a16b306c6c435ffcf726ff8b301edd9c10a43ddab8548e42fd1822a24c324869305e9e313f9bd0d78b44019933039050dd3a8994cb6d00d6d0d"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "real-require@1.0.0",
+      "type": "library",
+      "name": "real-require",
+      "version": "1.0.0",
+      "scope": "required",
+      "author": "Paolo Insogna <shogun@cowtech.it>",
+      "description": "Keep require and import consistent after bundling or transpiling",
+      "purl": "pkg:npm/real-require@1.0.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/real-require/-/real-require-1.0.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/pinojs/real-require.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/pinojs/real-require"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/pinojs/real-require/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "3f89db41841f78f271452998faffca20dc55b9c9b8345de9decee926f78c4eda26e76151e181a5b5440b07c89d0d7c030d65be798ad60c56eecd49e3a161c5ee"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "toad-cache@3.7.4",
+      "type": "library",
+      "name": "toad-cache",
+      "version": "3.7.4",
+      "scope": "required",
+      "author": "Igor Savin <kibertoad@gmail.com>",
+      "description": "LRU and FIFO caches for Client or Server",
+      "purl": "pkg:npm/toad-cache@3.7.4",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/toad-cache/-/toad-cache-3.7.4.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/kibertoad/toad-cache.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/kibertoad/toad-cache"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/kibertoad/toad-cache/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "9b54dd47faef4fb920189661b2936d5ddb1d624d1f75d1692491651b9b3e5243c5a3a9642e867760b39aa2f3d88ead51ef934fe497de4e548768eb04d3da5e0a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "ws@8.21.3",
+      "type": "library",
+      "name": "ws",
+      "version": "8.21.3",
+      "scope": "required",
+      "author": "Einar Otto Stangvik <einaros@gmail.com> (http://2x.io)",
+      "description": "Simple to use, blazing fast and thoroughly tested websocket client and server for Node.js",
+      "purl": "pkg:npm/ws@8.21.3",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/ws/-/ws-8.21.3.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/websockets/ws.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/websockets/ws"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "db4d5367f90f5b1a0faff38a5a3aae651d5258a5dcbf1747f9ed71af1f3d6f761b9b32cc1422df9da1b51c52205b324e11667b32fa4afbea1d66e7e0611e7447"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "zod@4.5.4",
+      "type": "library",
+      "name": "zod",
+      "version": "4.5.4",
+      "scope": "required",
+      "author": "Colin McDonnell <zod@colinhacks.com>",
+      "description": "TypeScript-first schema declaration and validation library with static type inference",
+      "purl": "pkg:npm/zod@4.5.4",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/zod/-/zod-4.5.4.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/colinhacks/zod.git"
+        },
+        {
+          "type": "website",
+          "url": "https://zod.dev"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/colinhacks/zod/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "b02f79b53e621c71fd82da63e80f35921f8d11a44050537eaa550f0d46d17ce32f35fe50081aac6f75a0be7a55b4ae58fb851f03a2aab9fa2db93bcc1a24e5b0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "sand-workbench@0.1.0",
+      "dependsOn": [
+        "@fastify/rate-limit@11.2.0",
+        "@fastify/swagger@9.8.1",
+        "@fastify/websocket@11.3.0",
+        "@monaco-editor/react@4.7.0",
+        "@opentelemetry/api@1.9.1",
+        "@opentelemetry/exporter-trace-otlp-http@0.222.0",
+        "@opentelemetry/sdk-node@0.222.0",
+        "fastify@5.12.3",
+        "lucide-react@1.41.0",
+        "monaco-editor@0.56.0",
+        "react@19.2.8",
+        "react-dom@19.2.8",
+        "ws@8.21.3",
+        "zod@4.5.4"
+      ]
+    },
+    {
+      "ref": "@fastify/ajv-compiler@4.0.6",
+      "dependsOn": [
+        "ajv-formats@3.0.1",
+        "fast-uri@4.1.4"
+      ]
+    },
+    {
+      "ref": "fast-uri@4.1.4",
+      "dependsOn": []
+    },
+    {
+      "ref": "@fastify/error@4.2.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "@fastify/fast-json-stringify-compiler@5.1.0",
+      "dependsOn": [
+        "fast-json-stringify@7.0.1"
+      ]
+    },
+    {
+      "ref": "@fastify/forwarded@3.0.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "@fastify/merge-json-schemas@0.2.1",
+      "dependsOn": [
+        "dequal@2.0.3"
+      ]
+    },
+    {
+      "ref": "@fastify/proxy-addr@5.1.0",
+      "dependsOn": [
+        "@fastify/forwarded@3.0.2",
+        "ipaddr.js@2.5.0"
+      ]
+    },
+    {
+      "ref": "@fastify/rate-limit@11.2.0",
+      "dependsOn": [
+        "@lukeed/ms@2.0.2",
+        "fastify-plugin@6.0.0",
+        "ip-address@10.7.0",
+        "toad-cache@3.7.4"
+      ]
+    },
+    {
+      "ref": "@fastify/swagger@9.8.1",
+      "dependsOn": [
+        "fastify-plugin@6.0.0",
+        "json-schema-resolver@3.0.0",
+        "openapi-types@12.1.3",
+        "rfdc@1.4.1"
+      ]
+    },
+    {
+      "ref": "@fastify/websocket@11.3.0",
+      "dependsOn": [
+        "duplexify@4.1.3",
+        "fastify-plugin@6.0.0",
+        "ws@8.21.3"
+      ]
+    },
+    {
+      "ref": "@lukeed/ms@2.0.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "@monaco-editor/loader@1.7.0",
+      "dependsOn": [
+        "state-local@1.0.7"
+      ]
+    },
+    {
+      "ref": "@monaco-editor/react@4.7.0",
+      "dependsOn": [
+        "monaco-editor@0.56.0",
+        "react@19.2.8",
+        "react-dom@19.2.8",
+        "@monaco-editor/loader@1.7.0"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/api@1.9.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "@opentelemetry/api-logs@0.222.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/configuration@0.222.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1",
+        "@opentelemetry/core@2.11.0"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/context-async-hooks@2.11.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/core@2.11.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1",
+        "@opentelemetry/semantic-conventions@1.43.0"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/exporter-logs-otlp-grpc@0.222.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1",
+        "@opentelemetry/otlp-exporter-base@0.222.0",
+        "@opentelemetry/otlp-grpc-exporter-base@0.222.0",
+        "@opentelemetry/otlp-transformer@0.222.0",
+        "@opentelemetry/sdk-logs@0.222.0"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/exporter-logs-otlp-http@0.222.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1",
+        "@opentelemetry/otlp-exporter-base@0.222.0",
+        "@opentelemetry/otlp-transformer@0.222.0",
+        "@opentelemetry/sdk-logs@0.222.0"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/exporter-logs-otlp-proto@0.222.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1",
+        "@opentelemetry/otlp-exporter-base@0.222.0",
+        "@opentelemetry/otlp-transformer@0.222.0",
+        "@opentelemetry/sdk-logs@0.222.0"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/exporter-metrics-otlp-grpc@0.222.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1",
+        "@opentelemetry/exporter-metrics-otlp-http@0.222.0",
+        "@opentelemetry/otlp-grpc-exporter-base@0.222.0",
+        "@opentelemetry/otlp-transformer@0.222.0"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/exporter-metrics-otlp-http@0.222.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1",
+        "@opentelemetry/core@2.11.0",
+        "@opentelemetry/otlp-exporter-base@0.222.0",
+        "@opentelemetry/otlp-transformer@0.222.0",
+        "@opentelemetry/resources@2.11.0",
+        "@opentelemetry/sdk-metrics@2.11.0"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/exporter-metrics-otlp-proto@0.222.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1",
+        "@opentelemetry/exporter-metrics-otlp-http@0.222.0",
+        "@opentelemetry/otlp-exporter-base@0.222.0",
+        "@opentelemetry/otlp-transformer@0.222.0"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/exporter-prometheus@0.222.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1",
+        "@opentelemetry/core@2.11.0",
+        "@opentelemetry/resources@2.11.0",
+        "@opentelemetry/sdk-metrics@2.11.0",
+        "@opentelemetry/semantic-conventions@1.43.0"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/exporter-trace-otlp-grpc@0.222.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1",
+        "@opentelemetry/otlp-exporter-base@0.222.0",
+        "@opentelemetry/otlp-grpc-exporter-base@0.222.0",
+        "@opentelemetry/otlp-transformer@0.222.0",
+        "@opentelemetry/sdk-trace@2.11.0"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/exporter-trace-otlp-http@0.222.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1",
+        "@opentelemetry/otlp-exporter-base@0.222.0",
+        "@opentelemetry/otlp-transformer@0.222.0",
+        "@opentelemetry/sdk-trace@2.11.0"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/exporter-trace-otlp-proto@0.222.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1",
+        "@opentelemetry/otlp-exporter-base@0.222.0",
+        "@opentelemetry/otlp-transformer@0.222.0",
+        "@opentelemetry/sdk-trace@2.11.0"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/exporter-zipkin@2.11.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1",
+        "@opentelemetry/core@2.11.0",
+        "@opentelemetry/resources@2.11.0",
+        "@opentelemetry/sdk-trace@2.11.0",
+        "@opentelemetry/semantic-conventions@1.43.0"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/instrumentation@0.222.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1",
+        "@opentelemetry/api-logs@0.222.0",
+        "import-in-the-middle@3.4.0",
+        "require-in-the-middle@8.0.1"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/otlp-exporter-base@0.222.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1",
+        "@opentelemetry/core@2.11.0",
+        "@opentelemetry/otlp-transformer@0.222.0"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/otlp-grpc-exporter-base@0.222.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1",
+        "@opentelemetry/core@2.11.0",
+        "@opentelemetry/otlp-exporter-base@0.222.0",
+        "@opentelemetry/otlp-transformer@0.222.0"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/otlp-transformer@0.222.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1",
+        "@opentelemetry/api-logs@0.222.0",
+        "@opentelemetry/core@2.11.0",
+        "@opentelemetry/resources@2.11.0",
+        "@opentelemetry/sdk-logs@0.222.0",
+        "@opentelemetry/sdk-metrics@2.11.0",
+        "@opentelemetry/sdk-trace@2.11.0"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/propagator-b3@2.11.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1",
+        "@opentelemetry/core@2.11.0"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/propagator-jaeger@2.11.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1",
+        "@opentelemetry/core@2.11.0"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/resources@2.11.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1",
+        "@opentelemetry/core@2.11.0",
+        "@opentelemetry/semantic-conventions@1.43.0"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/sdk-logs@0.222.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1",
+        "@opentelemetry/api-logs@0.222.0",
+        "@opentelemetry/core@2.11.0",
+        "@opentelemetry/resources@2.11.0",
+        "@opentelemetry/semantic-conventions@1.43.0"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/sdk-metrics@2.11.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1",
+        "@opentelemetry/core@2.11.0",
+        "@opentelemetry/resources@2.11.0"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/sdk-node@0.222.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1",
+        "@opentelemetry/api-logs@0.222.0",
+        "@opentelemetry/configuration@0.222.0",
+        "@opentelemetry/context-async-hooks@2.11.0",
+        "@opentelemetry/core@2.11.0",
+        "@opentelemetry/exporter-logs-otlp-grpc@0.222.0",
+        "@opentelemetry/exporter-logs-otlp-http@0.222.0",
+        "@opentelemetry/exporter-logs-otlp-proto@0.222.0",
+        "@opentelemetry/exporter-metrics-otlp-grpc@0.222.0",
+        "@opentelemetry/exporter-metrics-otlp-http@0.222.0",
+        "@opentelemetry/exporter-metrics-otlp-proto@0.222.0",
+        "@opentelemetry/exporter-prometheus@0.222.0",
+        "@opentelemetry/exporter-trace-otlp-grpc@0.222.0",
+        "@opentelemetry/exporter-trace-otlp-http@0.222.0",
+        "@opentelemetry/exporter-trace-otlp-proto@0.222.0",
+        "@opentelemetry/exporter-zipkin@2.11.0",
+        "@opentelemetry/instrumentation@0.222.0",
+        "@opentelemetry/otlp-exporter-base@0.222.0",
+        "@opentelemetry/otlp-grpc-exporter-base@0.222.0",
+        "@opentelemetry/propagator-b3@2.11.0",
+        "@opentelemetry/propagator-jaeger@2.11.0",
+        "@opentelemetry/resources@2.11.0",
+        "@opentelemetry/sdk-logs@0.222.0",
+        "@opentelemetry/sdk-metrics@2.11.0",
+        "@opentelemetry/sdk-trace@2.11.0",
+        "@opentelemetry/sdk-trace-base@2.11.0",
+        "@opentelemetry/sdk-trace-node@2.11.0",
+        "@opentelemetry/semantic-conventions@1.43.0"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/sdk-trace@2.11.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1",
+        "@opentelemetry/core@2.11.0",
+        "@opentelemetry/resources@2.11.0",
+        "@opentelemetry/semantic-conventions@1.43.0"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/sdk-trace-base@2.11.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1",
+        "@opentelemetry/core@2.11.0",
+        "@opentelemetry/resources@2.11.0",
+        "@opentelemetry/sdk-trace@2.11.0",
+        "@opentelemetry/semantic-conventions@1.43.0"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/sdk-trace-node@2.11.0",
+      "dependsOn": [
+        "@opentelemetry/api@1.9.1",
+        "@opentelemetry/context-async-hooks@2.11.0",
+        "@opentelemetry/core@2.11.0",
+        "@opentelemetry/sdk-trace-base@2.11.0"
+      ]
+    },
+    {
+      "ref": "@opentelemetry/semantic-conventions@1.43.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "@pinojs/redact@0.4.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "@types/trusted-types@2.0.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "abstract-logging@2.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "ajv-formats@3.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "atomic-sleep@1.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "avvio@9.3.0",
+      "dependsOn": [
+        "@fastify/error@4.2.0",
+        "fastq@1.20.3"
+      ]
+    },
+    {
+      "ref": "cjs-module-lexer@2.2.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "cookie@1.1.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "dequal@2.0.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "dompurify@3.4.15",
+      "dependsOn": [
+        "@types/trusted-types@2.0.7"
+      ]
+    },
+    {
+      "ref": "duplexify@4.1.3",
+      "dependsOn": [
+        "readable-stream@3.6.2",
+        "stream-shift@1.0.3"
+      ]
+    },
+    {
+      "ref": "fast-decode-uri-component@1.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "fast-json-stringify@7.0.1",
+      "dependsOn": [
+        "@fastify/merge-json-schemas@0.2.1",
+        "ajv-formats@3.0.1",
+        "fast-uri@4.1.4",
+        "json-schema-ref-resolver@3.0.0",
+        "rfdc@1.4.1"
+      ]
+    },
+    {
+      "ref": "fast-querystring@1.1.2",
+      "dependsOn": [
+        "fast-decode-uri-component@1.0.1"
+      ]
+    },
+    {
+      "ref": "fastify@5.12.3",
+      "dependsOn": [
+        "@fastify/ajv-compiler@4.0.6",
+        "@fastify/error@4.2.0",
+        "@fastify/fast-json-stringify-compiler@5.1.0",
+        "@fastify/proxy-addr@5.1.0",
+        "abstract-logging@2.0.1",
+        "avvio@9.3.0",
+        "fast-json-stringify@7.0.1",
+        "find-my-way@9.9.0",
+        "light-my-request@6.6.0",
+        "pino@10.3.1",
+        "process-warning@5.1.0",
+        "rfdc@1.4.1",
+        "secure-json-parse@4.1.0",
+        "semver@7.8.5",
+        "toad-cache@3.7.4"
+      ]
+    },
+    {
+      "ref": "fastify-plugin@6.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "semver@7.8.5",
+      "dependsOn": []
+    },
+    {
+      "ref": "fastq@1.20.3",
+      "dependsOn": [
+        "reusify@1.1.0"
+      ]
+    },
+    {
+      "ref": "find-my-way@9.9.0",
+      "dependsOn": [
+        "fast-querystring@1.1.2",
+        "safe-regex2@5.1.1"
+      ]
+    },
+    {
+      "ref": "import-in-the-middle@3.4.0",
+      "dependsOn": [
+        "cjs-module-lexer@2.2.1",
+        "module-details-from-path@1.0.4"
+      ]
+    },
+    {
+      "ref": "ip-address@10.7.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "ipaddr.js@2.5.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "json-schema-ref-resolver@3.0.0",
+      "dependsOn": [
+        "dequal@2.0.3"
+      ]
+    },
+    {
+      "ref": "json-schema-resolver@3.0.0",
+      "dependsOn": [
+        "rfdc@1.4.1"
+      ]
+    },
+    {
+      "ref": "light-my-request@6.6.0",
+      "dependsOn": [
+        "cookie@1.1.1",
+        "process-warning@4.0.1",
+        "set-cookie-parser@2.7.2"
+      ]
+    },
+    {
+      "ref": "process-warning@4.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "lucide-react@1.41.0",
+      "dependsOn": [
+        "react@19.2.8"
+      ]
+    },
+    {
+      "ref": "marked@14.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "module-details-from-path@1.0.4",
+      "dependsOn": []
+    },
+    {
+      "ref": "monaco-editor@0.56.0",
+      "dependsOn": [
+        "marked@14.0.0",
+        "dompurify@3.4.15"
+      ]
+    },
+    {
+      "ref": "on-exit-leak-free@2.1.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "openapi-types@12.1.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pino@10.3.1",
+      "dependsOn": [
+        "atomic-sleep@1.0.0",
+        "on-exit-leak-free@2.1.2",
+        "pino-abstract-transport@3.0.0",
+        "pino-std-serializers@7.1.0",
+        "process-warning@5.1.0",
+        "quick-format-unescaped@4.0.4",
+        "real-require@0.2.0",
+        "safe-stable-stringify@2.5.0",
+        "@pinojs/redact@0.4.0",
+        "sonic-boom@4.2.1",
+        "thread-stream@4.2.0"
+      ]
+    },
+    {
+      "ref": "pino-abstract-transport@3.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pino-std-serializers@7.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "process-warning@5.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "quick-format-unescaped@4.0.4",
+      "dependsOn": []
+    },
+    {
+      "ref": "react@19.2.8",
+      "dependsOn": []
+    },
+    {
+      "ref": "react-dom@19.2.8",
+      "dependsOn": [
+        "react@19.2.8",
+        "scheduler@0.27.0"
+      ]
+    },
+    {
+      "ref": "readable-stream@3.6.2",
+      "dependsOn": [
+        "string_decoder@1.3.0"
+      ]
+    },
+    {
+      "ref": "real-require@0.2.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "require-in-the-middle@8.0.1",
+      "dependsOn": [
+        "module-details-from-path@1.0.4"
+      ]
+    },
+    {
+      "ref": "ret@0.5.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "reusify@1.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "rfdc@1.4.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "safe-buffer@5.2.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "safe-regex2@5.1.1",
+      "dependsOn": [
+        "ret@0.5.0"
+      ]
+    },
+    {
+      "ref": "safe-stable-stringify@2.5.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "scheduler@0.27.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "secure-json-parse@4.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "set-cookie-parser@2.7.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "sonic-boom@4.2.1",
+      "dependsOn": [
+        "atomic-sleep@1.0.0"
+      ]
+    },
+    {
+      "ref": "state-local@1.0.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "stream-shift@1.0.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "string_decoder@1.3.0",
+      "dependsOn": [
+        "safe-buffer@5.2.1"
+      ]
+    },
+    {
+      "ref": "thread-stream@4.2.0",
+      "dependsOn": [
+        "real-require@1.0.0"
+      ]
+    },
+    {
+      "ref": "real-require@1.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "toad-cache@3.7.4",
+      "dependsOn": []
+    },
+    {
+      "ref": "ws@8.21.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "zod@4.5.4",
+      "dependsOn": []
+    }
+  ]
+}

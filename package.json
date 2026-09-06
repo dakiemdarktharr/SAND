@@ -1,0 +1,107 @@
+{
+  "name": "sand-workbench",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SAND — a verifiable engineering workbench",
+  "type": "module",
+  "main": "dist/desktop/main.cjs",
+  "engines": {
+    "node": ">=24.0.0 <25"
+  },
+  "scripts": {
+    "dev": "npm run build && electron .",
+    "build": "node scripts/build.mjs",
+    "start": "electron .",
+    "api": "tsx services/control-plane/src/main.ts",
+    "migrate": "tsx services/control-plane/src/migrate.ts",
+    "worker": "tsx services/workflows/src/main.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:unit": "vitest run --exclude '**/*.integration.test.ts' --exclude '**/*.contract.test.ts'",
+    "test:integration": "vitest run tests/integration",
+    "test:e2e": "playwright test",
+    "check": "npm run lint && npm run typecheck && npm test && npm run build && npm run test:e2e",
+    "package:win": "npm run build && electron-builder --win nsis --publish never",
+    "package:mac": "npm run build && electron-builder --mac dmg --publish never",
+    "sbom": "npm sbom --sbom-format cyclonedx --omit dev",
+    "setup:desktop": "node node_modules/electron/install.js",
+    "test:durability": "node scripts/test-durability.mjs",
+    "test:package": "node scripts/smoke-package.mjs"
+  },
+  "dependencies": {
+    "@fastify/rate-limit": "11.2.0",
+    "@fastify/swagger": "9.8.1",
+    "@fastify/websocket": "11.3.0",
+    "@monaco-editor/react": "4.7.0",
+    "@opentelemetry/api": "1.9.1",
+    "@opentelemetry/exporter-trace-otlp-http": "0.222.0",
+    "@opentelemetry/sdk-node": "0.222.0",
+    "@temporalio/activity": "1.23.0",
+    "@temporalio/client": "1.23.0",
+    "@temporalio/common": "1.23.0",
+    "@temporalio/worker": "1.23.0",
+    "@temporalio/workflow": "1.23.0",
+    "fastify": "5.12.3",
+    "lucide-react": "1.41.0",
+    "monaco-editor": "0.56.0",
+    "pg": "8.23.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "ws": "8.21.3",
+    "zod": "4.5.4"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.8",
+    "@eslint/js": "9.39.5",
+    "@playwright/test": "1.63.0",
+    "@temporalio/testing": "1.23.0",
+    "@types/node": "24.13.3",
+    "@types/pg": "8.23.1",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.7",
+    "@types/ws": "8.18.1",
+    "@vitejs/plugin-react": "5.2.0",
+    "electron": "44.2.0",
+    "electron-builder": "26.15.3",
+    "embedded-postgres": "17.10.0-beta.17",
+    "esbuild": "0.28.2",
+    "eslint": "9.39.5",
+    "tsx": "4.23.13",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.69.0",
+    "vite": "7.3.6",
+    "vitest": "3.2.7"
+  },
+  "build": {
+    "appId": "dev.sand.workbench",
+    "productName": "SAND Preview",
+    "directories": {
+      "output": "release",
+      "app": "dist/package"
+    },
+    "files": [
+      "dist/desktop/**",
+      "dist/renderer/**",
+      "package.json",
+      "!node_modules/**/*",
+      "!**/node_modules/**/*"
+    ],
+    "asar": true,
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg",
+      "category": "public.app-category.developer-tools"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "electronVersion": "44.2.0"
+  },
+  "overrides": {
+    "dompurify": "3.4.15"
+  }
+}

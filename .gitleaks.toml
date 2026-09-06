@@ -1,0 +1,13 @@
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Generated dependencies, build outputs and isolated test databases are outside authored source"
+paths = [
+  '''(^|[\\/])node_modules[\\/]''',
+  '''(^|[\\/])dist[\\/]''',
+  '''(^|[\\/])release[\\/]''',
+  '''(^|[\\/])\.runtime[\\/]''',
+  '''(^|[\\/])artifacts[\\/]''',
+  '''(^|[\\/])test-results[\\/]'''
+]

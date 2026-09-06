@@ -1,0 +1,41 @@
+# Development infrastructure only. Supply secrets via the operator environment.
+services:
+  postgres:
+    image: postgres:17.6-alpine
+    environment:
+      POSTGRES_USER: sand_migrator
+      POSTGRES_DB: sand
+      POSTGRES_PASSWORD: ${SAND_POSTGRES_PASSWORD:?Set SAND_POSTGRES_PASSWORD}
+      SAND_RUNTIME_DB_PASSWORD: ${SAND_RUNTIME_DB_PASSWORD:?Set SAND_RUNTIME_DB_PASSWORD}
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - sand-postgres:/var/lib/postgresql/data
+      - ./postgres-init.sh:/docker-entrypoint-initdb.d/10-sand-role.sh:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sand_migrator -d sand"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    security_opt:
+      - no-new-privileges:true
+  temporal:
+    image: temporalio/auto-setup:1.27.2
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DB: postgres12
+      DB_PORT: "5432"
+      POSTGRES_SEEDS: postgres
+      POSTGRES_USER: sand_migrator
+      POSTGRES_PWD: ${SAND_POSTGRES_PASSWORD:?Set SAND_POSTGRES_PASSWORD}
+      DBNAME: temporal
+      VISIBILITY_DBNAME: temporal_visibility
+      DYNAMIC_CONFIG_FILE_PATH: config/dynamicconfig/development-sql.yaml
+    ports:
+      - "127.0.0.1:7233:7233"
+    security_opt:
+      - no-new-privileges:true
+volumes:
+  sand-postgres:

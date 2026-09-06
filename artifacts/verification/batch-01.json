@@ -1,0 +1,64 @@
+{
+  "createdAt": "2026-09-06T20:33:37.729Z",
+  "status": "development-preview",
+  "productionReady": false,
+  "sourceManifestSha256": "10921be9668b942ba9e8d2a617632d366df4f04c039b53ff295bc110babec1a4",
+  "sourceFileCount": 79,
+  "tests": {
+    "default": {
+      "passed": 130,
+      "failed": 0,
+      "skipped": 11
+    },
+    "desktopE2E": {
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0
+    },
+    "temporalNativePostgres": {
+      "passed": 5,
+      "evidence": "Observed command output in the implementation session; no separate machine report retained"
+    },
+    "realProviderContracts": {
+      "passed": 1,
+      "skipped": 4,
+      "scope": "Public OpenRouter discovery only",
+      "evidence": "Observed command output in the implementation session"
+    }
+  },
+  "evidence": [
+    {
+      "file": "artifacts/local/unit-integration-results.json",
+      "sha256": "115024187c9b94446012ec49d8aef96b55dd68542243e82ee33a97f54dd65eab"
+    },
+    {
+      "file": "artifacts/local/e2e-results.json",
+      "sha256": "80d9e7a69aae3c6d8637ff7c7a94abb183e6bf15f44e9771e0b88df3dbb0225f"
+    },
+    {
+      "file": "artifacts/local/fullstack-evidence.json",
+      "sha256": "b451f6f3ac24c2bbff3a95486d0b86921254949e84983f9d95476b9644760e36"
+    },
+    {
+      "file": "artifacts/local/package-smoke.json",
+      "sha256": "224a5d785c5f1e225f2bf925f997f2826187be40d851dc2b0b7dc730655994b1"
+    },
+    {
+      "file": "artifacts/local/package-authenticode.json",
+      "sha256": "346a3b6bd07443eec1e923a13de507402fd6c912ef9b811f804e314b346f942b"
+    },
+    {
+      "file": "artifacts/security/npm-audit.json",
+      "sha256": "433b1f9c7d56cc210c466ed3f88639ef55572e4bef8e5326c439a377fe482b9c"
+    },
+    {
+      "file": "artifacts/security/gitleaks.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "file": "artifacts/security/sbom.cdx.json",
+      "sha256": "4261bc8e94484d45b8f10d4077007128083eec46738564c3fd595907f2f0284f"
+    }
+  ],
+  "releaseGates": "docs/reports/batch-01.md"
+}

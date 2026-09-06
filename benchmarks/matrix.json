@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "status": "not-run",
+  "comparisonClaim": null,
+  "protocol": "../docs/product/benchmark.md",
+  "requiredTrialMetadata": [
+    "product",
+    "productVersion",
+    "repositoryCommit",
+    "taskId",
+    "modelId",
+    "modelSource",
+    "priceSource",
+    "priceObservedAt",
+    "hardware",
+    "os",
+    "region",
+    "networkProfile",
+    "startedAt",
+    "finishedAt",
+    "evidence"
+  ],
+  "requiredMetrics": [
+    "completed",
+    "firstUsefulResultMs",
+    "testedChangeMs",
+    "humanInterventions",
+    "retryCount",
+    "recoveryMs",
+    "cancellationMs",
+    "costCurrency",
+    "costAmount",
+    "providerLatencyMs",
+    "actionsTotal",
+    "actionsWithProvenance",
+    "permissionAttempts",
+    "permissionEscapes",
+    "logicalSideEffects",
+    "duplicateSideEffects"
+  ],
+  "cases": [
+    {
+      "id": "parity/repository-edit",
+      "gate": "parity",
+      "status": "not-run"
+    },
+    {
+      "id": "parity/text-symbol-search",
+      "gate": "parity",
+      "status": "not-run"
+    },
+    {
+      "id": "parity/terminal",
+      "gate": "parity",
+      "status": "not-run"
+    },
+    {
+      "id": "parity/git-diff-commit",
+      "gate": "parity",
+      "status": "not-run"
+    },
+    {
+      "id": "parity/agent-multifile",
+      "gate": "parity",
+      "status": "not-run"
+    },
+    {
+      "id": "parity/run-tests",
+      "gate": "parity",
+      "status": "not-run"
+    },
+    {
+      "id": "parity/browser",
+      "gate": "parity",
+      "status": "not-run"
+    },
+    {
+      "id": "parity/mcp-stdio-http",
+      "gate": "parity",
+      "status": "not-run"
+    },
+    {
+      "id": "parity/github-branch-pr",
+      "gate": "parity",
+      "status": "not-run"
+    },
+    {
+      "id": "parity/background-task",
+      "gate": "parity",
+      "status": "not-run"
+    },
+    {
+      "id": "parity/parallel-agents",
+      "gate": "parity",
+      "status": "not-run"
+    },
+    {
+      "id": "parity/tool-approval",
+      "gate": "parity",
+      "status": "not-run"
+    },
+    {
+      "id": "differentiation/durable-admission",
+      "gate": "differentiation",
+      "status": "not-run"
+    },
+    {
+      "id": "differentiation/crash-resume",
+      "gate": "differentiation",
+      "status": "not-run"
+    },
+    {
+      "id": "differentiation/websocket-replay",
+      "gate": "differentiation",
+      "status": "not-run"
+    },
+    {
+      "id": "differentiation/hierarchical-cancellation",
+      "gate": "differentiation",
+      "status": "not-run"
+    },
+    {
+      "id": "differentiation/worker-isolation",
+      "gate": "differentiation",
+      "status": "not-run"
+    },
+    {
+      "id": "differentiation/hierarchical-quota",
+      "gate": "differentiation",
+      "status": "not-run"
+    },
+    {
+      "id": "differentiation/argument-aware-approval",
+      "gate": "differentiation",
+      "status": "not-run"
+    },
+    {
+      "id": "differentiation/policy-as-code",
+      "gate": "differentiation",
+      "status": "not-run"
+    },
+    {
+      "id": "differentiation/cost-aware-routing",
+      "gate": "differentiation",
+      "status": "not-run"
+    },
+    {
+      "id": "differentiation/live-registry",
+      "gate": "differentiation",
+      "status": "not-run"
+    },
+    {
+      "id": "differentiation/provider-failover",
+      "gate": "differentiation",
+      "status": "not-run"
+    },
+    {
+      "id": "differentiation/audit-integrity",
+      "gate": "differentiation",
+      "status": "not-run"
+    },
+    {
+      "id": "differentiation/prompt-to-pr-provenance",
+      "gate": "differentiation",
+      "status": "not-run"
+    },
+    {
+      "id": "differentiation/dead-letter-recovery",
+      "gate": "differentiation",
+      "status": "not-run"
+    }
+  ]
+}
