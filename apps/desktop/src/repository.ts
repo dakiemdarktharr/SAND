@@ -25,6 +25,8 @@ export function validateRelative(input: string): string {
 export class RepositoryBroker {
   private root: string | null = null;
   private repositoryId = randomUUID();
+  private grantedToolScope: string | null = null;
+  toolScope(): string { this.requireRoot(); return this.grantedToolScope!; }
   private queue: Promise<unknown> = Promise.resolve();
   constructor(private readonly recoveryDirectory: string) {}
   private serial<T>(fn: () => Promise<T>): Promise<T> { const result = this.queue.then(fn, fn); this.queue = result.catch(() => undefined); return result; }
@@ -34,7 +36,7 @@ export class RepositoryBroker {
     if (!info.isDirectory() || info.isSymbolicLink()) throw new RepositoryError('PATH_DENIED', 'Choose a real local directory, not a link.');
     const canonical = await realpath(selected);
     if (canonical.startsWith('\\\\')) throw new RepositoryError('PATH_DENIED', 'Network workspaces are unavailable in this preview.');
-    this.root = canonical; this.repositoryId = randomUUID();
+    this.root = canonical; this.repositoryId = randomUUID(); this.grantedToolScope = digest(JSON.stringify({canonical,dev:info.dev,ino:info.ino,birthtimeMs:info.birthtimeMs}));
     await mkdir(this.recoveryDirectory, { recursive: true, mode: 0o700 });
     return this.list();
     });

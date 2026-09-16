@@ -27,12 +27,25 @@
     "sbom": "npm sbom --sbom-format cyclonedx --omit dev",
     "setup:desktop": "node node_modules/electron/install.js",
     "test:durability": "node scripts/test-durability.mjs",
-    "test:package": "node scripts/smoke-package.mjs"
+    "test:package": "node scripts/smoke-package.mjs",
+    "demo": "tsx services/local-demo/main.ts",
+    "test:demo": "vitest run tests/integration/local-demo.integration.test.ts",
+    "demo:studio": "tsx services/studio-demo/main.ts",
+    "test:studio": "vitest run packages/studio/src",
+    "demo:tools": "tsx services/tools-demo/main.ts",
+    "mcp:utility": "tsx services/mcp-utility/main.ts",
+    "test:tools": "vitest run packages/tools packages/identity",
+    "demo:research": "tsx services/tools-demo/main.ts --research",
+    "demo:mcp": "tsx services/tools-demo/main.ts --mcp",
+    "demo:edit": "tsx services/tools-demo/main.ts --edit",
+    "package:win:production": "npm run build && electron-builder --win nsis --config.forceCodeSigning=true --publish never",
+    "demo:desktop": "npm run build && node scripts/show-demo.mjs"
   },
   "dependencies": {
     "@fastify/rate-limit": "11.2.0",
     "@fastify/swagger": "9.8.1",
     "@fastify/websocket": "11.3.0",
+    "@modelcontextprotocol/sdk": "1.30.0",
     "@monaco-editor/react": "4.7.0",
     "@opentelemetry/api": "1.9.1",
     "@opentelemetry/exporter-trace-otlp-http": "0.222.0",
@@ -43,6 +56,7 @@
     "@temporalio/worker": "1.23.0",
     "@temporalio/workflow": "1.23.0",
     "fastify": "5.12.3",
+    "jose": "6.2.12",
     "lucide-react": "1.41.0",
     "monaco-editor": "0.56.0",
     "pg": "8.23.0",
@@ -71,7 +85,7 @@
     "typescript": "5.9.3",
     "typescript-eslint": "8.69.0",
     "vite": "7.3.6",
-    "vitest": "3.2.7"
+    "vitest": "4.1.11"
   },
   "build": {
     "appId": "dev.sand.workbench",

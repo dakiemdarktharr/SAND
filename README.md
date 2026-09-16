@@ -1,58 +1,79 @@
 # SAND
 
-AI-native engineering workbench, đang xây theo vertical slices. **Đây là development preview 0.1; chưa production-ready và chưa có bằng chứng vượt Cursor.**
+**A low-code, multi-model AI workflow IDE for people who know their field.** Runnable Windows development preview; the expanded Stage 1 is **not complete**, and this is not production-ready.
 
-Batch 01 có Electron + React + Monaco, repository broker thực, Git status/diff, PostgreSQL run/event/audit/outbox, Temporal registry workflow, model discovery 5 provider, policy evaluator và replay WebSocket. Agent sửa code, inference adapters đầy đủ, MCP/OAuth, GitHub App, microVM, quota nhiều cấp, signed release vẫn là backlog. Xem [báo cáo batch 01 và bằng chứng thực tế](docs/reports/batch-01.md) hoặc [backlog](docs/product/backlog.md).
+Domain experts need specialist agents, explicit data flow and reviewable results—not just chat. SAND combines a visual workflow composer with Monaco and a local execution engine. Agents can propose repository or research/MCP tools; every call requires approval of its exact arguments. Runs, model turns, approvals and receipts survive restart.
 
-## Chạy desktop trên Windows
+**Complete demonstrated workflow:** choose a model → agent requests a tool → policy asks → persist approval → restart SAND → approve → execute the actual tool → review → report with verifiable audit. A separate template runs two local models in parallel, then synthesizes their results.
 
-Yêu cầu Node.js 24 và Git.
+## Start / demo
 
-```powershell
+Prerequisites: **Node 24.x, npm 11, Git**. Real inference needs Ollama running with an installed model. No Docker, PostgreSQL server or cloud key is needed for the local workflow.
+
+~~~sh
 npm ci
 npm run setup:desktop
 npm run dev
-```
+~~~
 
-Chọn **Open repository** bằng native dialog. SAND không chạy install scripts khi mở repository. File save kiểm tra phiên bản và giữ bản khôi phục. API chưa cấu hình → unavailable, không có fake run/model.
+In Studio: find models, choose a repository, select tools on an agent, select **Ollama JSON** protocol for the observed Qwen installation, enter a task and run. Inspect the approval inbox before granting a tool. [Exact walkthrough, MCP, credentials and OIDC configuration](docs/governed-tools.md).
 
-## Control plane và worker
+~~~sh
+npm run demo:desktop  # runs actual Ollama + tool + restore, then opens the completed run
+npm run demo:tools    # real repository read + durable approval + audit, terminal evidence
+npm run demo:edit     # real recoverable edit in a NEW generated demo workspace
+npm run demo:research # real public HTTPS retrieval; no synthetic search results
+npm run demo:mcp      # real stdio MCP server + actual model tool request
+npm run demo:studio   # two installed local models, three calls, review/report
+npm run demo          # offline PGlite + real HTTP/replay; no AI inference
+~~~
 
-Đọc [hướng dẫn backend](docs/control-plane.md) để tạo PostgreSQL migrator/runtime role riêng, bootstrap organization/project local, và khởi chạy API trên 127.0.0.1:4310. [Compose development](infra/compose.dev.yaml) là lựa chọn khi đã có Docker. Không có in-memory fallback trong API production path.
+Tool demos fail if the model does not request the expected call. Their scripted consent is restricted to the exact non-sensitive demo operation; desktop consent is interactive. Outputs are saved under a new .runtime directory on every run.
 
-[Worker hướng dẫn](docs/workflows.md): Temporal dev server + npm run worker. Cấu hình cùng SAND_TENANT_ID / SAND_ACTOR_ID giữa API và worker; queue được tách theo identity local. SAND_API_TOKEN chỉ ở môi trường main/API, không renderer. Khởi động production bị từ chối cho tới khi OIDC/TLS và runtime gates hoàn tất.
+![SAND tool approval](docs/evidence/governed-tool-approval.png)
 
-[Provider hướng dẫn](docs/providers.md): credential chỉ ở process worker/Vault. Có thể dùng public catalog OpenRouter với SAND_OPENROUTER_PUBLIC_DISCOVERY=1; đây là discovery, không xác nhận inference. UI không coi giá unknown là $0.
+## Architecture
 
-## Kiểm chứng
+~~~mermaid
+flowchart LR
+  UI[React Studio / Monaco] --> IPC[Typed preload + checked Electron main]
+  IPC --> Runtime[Local DAG + shared policy]
+  Runtime --> DB[(SQLite checkpoints / tool journal / audit)]
+  Runtime --> Models[Ollama / configured cloud adapters]
+  Runtime --> Gate[Argument-bound approval]
+  Gate --> Tools[Repository broker / MCP client / HTTPS research]
+  IPC --> Vault[OS encrypted credentials / system-browser OIDC]
+  IPC -. separate foundation .-> API[Fastify / PostgreSQL RLS / outbox / WebSocket replay]
+  API --> Temporal[Temporal registry workflow]
+~~~
 
-```powershell
+Stack: Electron, React, TypeScript, Monaco, SQLite; Fastify, PostgreSQL/PGlite, Temporal, OpenTelemetry; official MCP SDK and JOSE. Local Studio and the cloud foundation have separate guarantees; agent DAGs are not yet Temporal workflows. [ADRs](docs/architecture/adrs.md) · [Threat model](docs/security/studio-threat-model.md).
+
+## Evidence / verification
+
+Actual Windows/Ollama observations on 2026-09-16: governed read completed in **1,918 ms**, with **2 real model turns, 1 tool call, 6 events preserved on database reopen and 17 audit events verified**. Public HTTPS and MCP demos also executed actual calls. These are single samples, not p95 or quality benchmarks. A model misdescribed a successful file-edit receipt in one run; the UI exposes system evidence separately. [Measured report and raw evidence](docs/reports/governed-preview.md).
+
+~~~sh
 npm run lint
 npm run typecheck
 npm test
 npm run build
 npm run test:e2e
-npm run test:durability -- --live-registry
+~~~
 
-# Full-stack desktop test dùng public OpenRouter catalog thật
-$env:SAND_FULLSTACK_E2E = "1"
-npm run test:e2e
-Remove-Item Env:SAND_FULLSTACK_E2E
-```
+Verified: **164 regression tests passed**, **5 real Temporal tests passed**, and **8 Electron E2E tests passed across the live suite and separate full-stack run**. See the report for skips and boundaries.
 
-Default tests dùng unit fixtures và PGlite (PostgreSQL WASM) để test SQL; live-provider/staging tests thiếu cấu hình được **skipped có lý do**. test:durability chạy native PostgreSQL 17 trong thư mục .runtime và Temporal dev server thật, không yêu cầu Docker. --live-registry thêm public OpenRouter thật. Không dùng native test database hoặc fixture như một production fallback.
+Live Electron tests require SAND_STUDIO_LIVE_TESTS=1 and actual local models. Cloud contracts explicitly skip unless enabled with credentials AND a model ID; they never turn an unavailable provider into a fake pass. [Verification results](docs/reports/governed-preview.md).
 
-Không cần gửi secret vào chat. Credentials đã có trong environment chỉ dùng cho endpoint tương ứng khi bật live test. Xem [acceptance plan](docs/product/acceptance-tests.md), [security matrix](docs/security/acceptance.md) và batch report trong docs/reports.
+## What works / what remains
 
-## Build installer preview
+Implemented: editable DAG, multi-model local inference, parallel steps, human review, pause/cancel/explicit resume, durable tool intent/receipt/approval, repository read/save, bounded public-web retrieval, Wikipedia search adapter, MCP stdio/Streamable HTTP, hash-chain audit, report export and local backup/restore. OS-protected credential storage is live-tested on Windows. OpenAI/OpenRouter/Anthropic/Gemini text adapters and a system-browser OIDC client exist; external credentialed operation remains unverified.
 
-```powershell
-npm run package:win
-npm run test:package
-```
+Still missing: remote MCP OAuth; backend OIDC/RBAC; refresh rotation; cloud agent workflows and isolated workers; terminal/LSP/full Git/GitHub App; browser automation; conditional/scheduled workflows; monetary budgets and provider failover; hosted TLS/IAM/operations; signed installers/updates and cross-platform validation. OIDC desktop login does not authorize backend tenants. Stdio MCP has OS-user authority. Documents/transcripts are plaintext; audit has no external anchor. Model output and secret scanning are fallible. No production readiness, competitor parity or alpha-generation quality claim.
 
-Artifact trong release là **unsigned development preview** trừ khi signing được cấu hình và xác minh. Không phát hành production hoặc tự update từ artifact chưa ký. macOS build/E2E/notarization cần máy macOS và signing identity.
+[Expanded two-stage roadmap](docs/product/roadmap-two-steps.md) · [Stage 1 gates](docs/product/stage-one-gates.md) · [Alternative-inspired matrix](docs/product/alternative-parity.md). Stage 2 is feedback, polish and debugging after Stage 1 gates pass; required features have not been moved there to imply completion.
 
-## Tài liệu thiết kế
+## Resume bullet
 
-[PRD](docs/product/prd.md) · [Kiến trúc](docs/architecture/overview.md) · [ADRs](docs/architecture/adrs.md) · [Threat model](docs/security/threat-model.md) · [Data classification](docs/security/data-classification.md) · [Contracts](docs/architecture/contracts.md) · [Benchmark protocol](docs/product/benchmark.md) · [Dependencies/cost assumptions](docs/operations/dependencies.md)
+- Built an Electron/React multi-model workflow IDE with persistent DAG state, argument-bound tool approvals, MCP integration and verifiable audit receipts.<br>
+  Validated actual Ollama execution, repository effects, encrypted credential storage and recovery across a full desktop restart with automated tests.

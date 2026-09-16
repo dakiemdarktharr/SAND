@@ -1,0 +1,32 @@
+{
+  "event": "demo.completed",
+  "observedAt": "2026-09-16T14:44:48.332Z",
+  "status": "completed",
+  "model": "qwen2.5-coder:7b",
+  "realModelTurns": 2,
+  "toolCalls": 1,
+  "tool": "mcp_59bbf5786fa519648c7403cd",
+  "preservedEvents": 6,
+  "audit": {
+    "valid": true,
+    "checked": 17,
+    "headHash": "92e7aaf17ac79bd0b3ab4c55b34d98401e8d6542a901f03dd338ee856e0f2e3c"
+  },
+  "elapsedMs": 1904,
+  "usage": {
+    "text": "4",
+    "requestedModel": "qwen2.5-coder:7b",
+    "reportedModel": "qwen2.5-coder:7b",
+    "provider": "ollama",
+    "inputTokens": 771,
+    "outputTokens": 54,
+    "durationMs": 1343,
+    "costUsd": null,
+    "costSource": null,
+    "observedAt": "2026-09-16T14:44:48.275Z",
+    "truncated": false
+  },
+  "directory": ".runtime/governed-demo-bamDkj",
+  "claims": "One actual local run; generated public demo brief; scripted approval restricted to one exact configured call; not a production or quality benchmark",
+  "evidenceNote": "Only the machine-specific directory was normalized; observed model text and measurements are preserved."
+}

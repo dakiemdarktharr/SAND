@@ -6,7 +6,6 @@ export default defineConfig({
     testTimeout: 30_000,
     hookTimeout: 60_000,
     maxWorkers: 2,
-    minWorkers: 1,
     reporters: ['default']
   }
 });

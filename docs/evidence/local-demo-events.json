@@ -1,0 +1,30 @@
+{
+  "events": [
+    {
+      "id": "5b197b96-1f67-4c08-84a7-46a6cc455a24",
+      "runId": "3839616b-d636-4b15-baaf-67527bbe70c5",
+      "sequence": 1,
+      "schemaVersion": 1,
+      "type": "run.accepted",
+      "at": "2026-09-11T08:49:59.104Z",
+      "payload": {
+        "kind": "registry.refresh",
+        "status": "queued",
+        "projectId": "10000000-0000-4000-8000-000000000003"
+      }
+    },
+    {
+      "id": "5761046e-4996-442c-ada9-b9725aa407aa",
+      "runId": "3839616b-d636-4b15-baaf-67527bbe70c5",
+      "sequence": 2,
+      "schemaVersion": 1,
+      "type": "run.cancellation_requested",
+      "at": "2026-09-11T08:49:59.166Z",
+      "payload": {
+        "status": "cancellation_requested"
+      }
+    }
+  ],
+  "lastSequence": 2,
+  "hasMore": false
+}

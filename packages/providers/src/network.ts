@@ -41,6 +41,13 @@ export function retryAfter(value: string | string[] | undefined, now = Date.now(
 export class RegistryNetworkBroker implements JsonTransport {
   constructor(private readonly localOrigin?: string) {}
   async get(value: string, headers: Record<string, string>, signal?: AbortSignal): Promise<unknown> {
+    return this.send(value, headers, undefined, signal, 20_000);
+  }
+  async post(value: string, headers: Record<string, string>, body: unknown, signal?: AbortSignal): Promise<unknown> {
+    return this.send(value, headers, JSON.stringify(body), signal, 180_000);
+  }
+  private async send(value: string, headers: Record<string, string>, body: string | undefined, signal: AbortSignal | undefined, timeout: number): Promise<unknown> {
+    if (body && Buffer.byteLength(body) > 512_000) throw new ProviderError('INPUT_LIMIT_EXCEEDED');
     const url = validateDestination(value, this.localOrigin);
     if (signal?.aborted) throw new ProviderError('CANCELLED');
     const local = url.protocol === 'http:';
@@ -55,8 +62,8 @@ export class RegistryNetworkBroker implements JsonTransport {
     if (signal?.aborted) throw new ProviderError('CANCELLED');
     return new Promise((resolve, reject) => {
       const request = (local ? httpRequest : httpsRequest)(url, {
-        method: 'GET',
-        headers: { accept: 'application/json', ...headers },
+        method: body === undefined ? 'GET' : 'POST',
+        headers: { accept: 'application/json', ...(body === undefined ? {} : {'content-type':'application/json', 'content-length':String(Buffer.byteLength(body))}), ...headers },
         signal,
         family: address.family,
         lookup: (_hostname, _options, callback) => callback(null, address.address, address.family),
@@ -92,10 +99,10 @@ export class RegistryNetworkBroker implements JsonTransport {
           catch { reject(new ProviderError('INVALID_PROVIDER_RESPONSE')); }
         });
       });
-      const deadline = setTimeout(() => request.destroy(new Error('deadline')), 20_000);
+      const deadline = setTimeout(() => request.destroy(new Error('deadline')), timeout);
       request.on('close', () => clearTimeout(deadline));
       request.on('error', () => reject(new ProviderError(signal?.aborted ? 'CANCELLED' : 'NETWORK_UNAVAILABLE', !signal?.aborted)));
-      request.end();
+      request.end(body);
     });
   }
 }

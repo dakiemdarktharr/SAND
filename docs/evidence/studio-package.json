@@ -1,0 +1,24 @@
+{
+  "at": "2026-09-16T12:35:39.562Z",
+  "platform": "win32",
+  "arch": "x64",
+  "security": {
+    "packaged": true,
+    "sandbox": true,
+    "contextIsolation": true,
+    "nodeIntegration": false
+  },
+  "launchToVisibleMs": 1552,
+  "archiveFiles": 16,
+  "archiveBytes": 4208356,
+  "archiveSha256": "06384826dd46926f00cf71ad76ea21a4289c4e9f3a937a6beffb8e4e98e838e1",
+  "result": "passed",
+  "installerLifecycle": "not tested",
+  "productionSigning": "not configured",
+  "installer": {
+    "name": "SAND Preview Setup 0.1.0.exe",
+    "bytes": 112145327,
+    "sha256": "E7DC282E6B3B953BAE97113923F331B7D782569513D7B9679C944DD552BDEFB9",
+    "signature": "NotSigned"
+  }
+}

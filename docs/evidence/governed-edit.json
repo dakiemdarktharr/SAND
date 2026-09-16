@@ -1,0 +1,32 @@
+{
+  "event": "demo.completed",
+  "observedAt": "2026-09-16T14:55:42.306Z",
+  "status": "completed",
+  "model": "qwen2.5-coder:7b",
+  "realModelTurns": 2,
+  "toolCalls": 1,
+  "tool": "repo_save",
+  "preservedEvents": 6,
+  "audit": {
+    "valid": true,
+    "checked": 17,
+    "headHash": "73ecc74c130765a30e0096d7c8d22758f78c5d16bc35b08c73122456e164d53b"
+  },
+  "elapsedMs": 8438,
+  "usage": {
+    "text": "The tool did not return a saved file hash.",
+    "requestedModel": "qwen2.5-coder:7b",
+    "reportedModel": "qwen2.5-coder:7b",
+    "provider": "ollama",
+    "inputTokens": 1091,
+    "outputTokens": 143,
+    "durationMs": 8255,
+    "costUsd": null,
+    "costSource": null,
+    "observedAt": "2026-09-16T14:55:42.230Z",
+    "truncated": false
+  },
+  "directory": ".runtime/governed-demo-ENIq1s",
+  "claims": "One actual local run; generated public demo brief; scripted approval restricted to one exact configured call; not a production or quality benchmark",
+  "evidenceNote": "Only the machine-specific directory was normalized; observed model text and measurements are preserved."
+}

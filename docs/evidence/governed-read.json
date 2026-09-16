@@ -1,0 +1,31 @@
+{
+  "event": "demo.completed",
+  "observedAt": "2026-09-16T14:43:14.217Z",
+  "status": "completed",
+  "model": "qwen2.5-coder:7b",
+  "realModelTurns": 2,
+  "toolEffects": 1,
+  "preservedEvents": 6,
+  "audit": {
+    "valid": true,
+    "checked": 17,
+    "headHash": "0405e41467e9041647d7ef5007693a5661891887040137bf341a606b739b7bad"
+  },
+  "elapsedMs": 1918,
+  "usage": {
+    "text": "The requirement is to summarize exhibit notes for museum exhibits, with the need for a curator's approval. The missing information includes details on the budget and deadline for the project.",
+    "requestedModel": "qwen2.5-coder:7b",
+    "reportedModel": "qwen2.5-coder:7b",
+    "provider": "ollama",
+    "inputTokens": 569,
+    "outputTokens": 61,
+    "durationMs": 1705,
+    "costUsd": null,
+    "costSource": null,
+    "observedAt": "2026-09-16T14:43:14.164Z",
+    "truncated": false
+  },
+  "directory": ".runtime/governed-demo-I31b1k",
+  "claims": "One actual local run; generated public demo brief; scripted approval restricted to one read; not a production or quality benchmark",
+  "evidenceNote": "Only the machine-specific directory was normalized; observed model text and measurements are preserved."
+}

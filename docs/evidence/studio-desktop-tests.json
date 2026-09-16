@@ -1,0 +1,112 @@
+{
+  "stats": {
+    "startTime": "2026-09-16T12:35:26.396Z",
+    "duration": 48943.326,
+    "expected": 5,
+    "skipped": 1,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "title": "truthful unavailable state, Node isolation, network denial, theme and command palette",
+      "results": [
+        {
+          "status": "expected",
+          "annotations": [],
+          "attempts": [
+            {
+              "status": "passed",
+              "durationMs": 3207
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "opens a real repository, edits with Monaco, saves and reads real Git diff",
+      "results": [
+        {
+          "status": "expected",
+          "annotations": [],
+          "attempts": [
+            {
+              "status": "passed",
+              "durationMs": 4602
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "retains dirty edits on external conflict and on tab close",
+      "results": [
+        {
+          "status": "expected",
+          "annotations": [],
+          "attempts": [
+            {
+              "status": "passed",
+              "durationMs": 5502
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "desktop → authenticated API → PostgreSQL/outbox → Temporal → public provider → visible registry",
+      "results": [
+        {
+          "status": "skipped",
+          "annotations": [
+            {
+              "type": "skip",
+              "description": "Set SAND_FULLSTACK_E2E=1 to launch real local PostgreSQL, Temporal and public OpenRouter discovery.",
+              "location": {
+                "file": "C:\\Users\\ANHKHOI\\Documents\\ChatGPT\\sand_workbench\\tests\\e2e\\fullstack.spec.ts",
+                "line": 16,
+                "column": 8
+              }
+            }
+          ],
+          "attempts": [
+            {
+              "status": "skipped",
+              "durationMs": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Studio saves an editable graph and restores it across a desktop restart without inference",
+      "results": [
+        {
+          "status": "expected",
+          "annotations": [],
+          "attempts": [
+            {
+              "status": "passed",
+              "durationMs": 3097
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "live Ollama: two models, parallel agents, review, restart, approval and final artifact",
+      "results": [
+        {
+          "status": "expected",
+          "annotations": [],
+          "attempts": [
+            {
+              "status": "passed",
+              "durationMs": 27510
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "at": "2026-09-11T08:50:00.420Z",
+  "mode": "local-development",
+  "result": "passed",
+  "projectCount": 1,
+  "runCount": 1,
+  "outboxCount": 2,
+  "eventCount": 2,
+  "auditEntries": 3,
+  "auditValid": true,
+  "policyDenied": true,
+  "idempotencyAcrossRestart": true,
+  "restoredStatus": "cancellation_requested",
+  "providerRequests": 0,
+  "modelInference": "not performed",
+  "restartMode": "graceful process exit and disk reopen",
+  "restartReadyMs": 980,
+  "totalMs": 9300,
+  "node": "v24.18.0",
+  "platform": "win32",
+  "arch": "x64",
+  "evidenceNote": "Actual clean-source run on 2026-09-11. Machine-specific directory omitted. One observation, not a latency benchmark."
+}

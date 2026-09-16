@@ -1,7 +1,7 @@
 import { createHash, randomUUID } from 'node:crypto';
 import { trace } from '@opentelemetry/api';
 import type { Pool } from 'pg';
-import { ToolPolicyEngine, type PolicySet } from '../../../packages/policy/src/index.js';
+import { ToolPolicyEngine, type PolicySet, type PolicyDecision } from '../../../packages/policy/src/index.js';
 import { DomainError, type Database, type DatabaseClient, type OutboxItem, type Principal, type Run, type RunEvent, type RunStatus } from './types.js';
 export type { Database, DatabaseClient, OutboxItem, Principal, Run, RunEvent, RunStatus } from './types.js';
 
@@ -103,17 +103,17 @@ export class Store {
     await c.query('INSERT INTO idempotency_records(tenant_id,actor_id,operation,key,input_hash,response) VALUES($1,$2,$3,$4,$5,$6::jsonb)', [p.tenantId, p.actorId, operation, key, inputHash, canonical(value)]);
     return { value, replayed: false };
   }
-  private async appendAudit(c: DatabaseClient, p: Principal, action: string, target: string, input: unknown, output: unknown): Promise<void> {
+  private async appendAudit(c: DatabaseClient, p: Principal, action: string, target: string, input: unknown, output: unknown, policyDecision?: PolicyDecision): Promise<void> {
     await c.query('INSERT INTO audit_heads(tenant_id) VALUES($1) ON CONFLICT DO NOTHING', [p.tenantId]);
     const head = (await c.query('SELECT sequence,head_hash FROM audit_heads WHERE tenant_id=$1 FOR UPDATE', [p.tenantId])).rows[0]!;
-    const body = canonical({ actor: p.actorId, organization: p.tenantId, action, target, inputHash: digest(canonical(input)), outputHash: digest(canonical(output)), policyVersion: this.admissionPolicy?.version ?? 'registry-v1', at: new Date().toISOString() });
+    const body = canonical({ actor: p.actorId, organization: p.tenantId, action, target, inputHash: digest(canonical(input)), outputHash: digest(canonical(output)), policyVersion: this.admissionPolicy?.version ?? 'registry-v1', reason: policyDecision?.reason ?? (action === 'run.cancellation_requested' ? 'user_requested_cancellation' : 'state_transition'), ...(policyDecision ? { decision: policyDecision.decision, matchedRuleIds: policyDecision.matchedRuleIds } : {}), at: new Date().toISOString() });
     const previous = String(head.head_hash);
     await c.query('INSERT INTO audit_ledger(tenant_id,sequence,id,body,previous_hash,hash) VALUES($1,$2,$3,$4,$5,$6)', [p.tenantId, Number(head.sequence) + 1, randomUUID(), body, previous, digest(`${previous}\n${body}`)]);
   }
-  private async appendEvent(c: DatabaseClient, p: Principal, runId: string, eventKey: string, type: string, payload: Record<string, unknown>): Promise<void> {
+  private async appendEvent(c: DatabaseClient, p: Principal, runId: string, eventKey: string, type: string, payload: Record<string, unknown>, policyDecision?: PolicyDecision): Promise<void> {
     const next = (await c.query('UPDATE runs SET next_sequence=next_sequence+1,updated_at=now() WHERE id=$1 RETURNING next_sequence', [runId])).rows[0]!;
     await c.query('INSERT INTO run_events(tenant_id,run_id,id,sequence,event_key,type,payload) VALUES($1,$2,$3,$4,$5,$6,$7::jsonb)', [p.tenantId, runId, randomUUID(), next.next_sequence, eventKey, type, canonical(payload)]);
-    await this.appendAudit(c, p, type, runId, { eventKey }, payload);
+    await this.appendAudit(c, p, type, runId, { eventKey }, payload, policyDecision);
   }
   private async enqueue(c: DatabaseClient, p: Principal, runId: string, action: 'start' | 'cancel'): Promise<void> {
     await c.query('INSERT INTO outbox(tenant_id,id,run_id,action,workflow_id) VALUES($1,$2,$3,$4,$5) ON CONFLICT(tenant_id,run_id,action) DO NOTHING', [p.tenantId, randomUUID(), runId, action, `sand/${p.tenantId}/${runId}`]);
@@ -123,7 +123,7 @@ export class Store {
     const decision = new ToolPolicyEngine().evaluate({ action: { actionId: digest(key), actorId: p.actorId, userId: p.actorId, tenantId: p.tenantId, organizationId: p.tenantId, projectId: input.projectId, sessionId: `local/${p.actorId}`, runId: null, tool: 'registry', operation: 'refresh', arguments: { projectId: input.projectId, kind: input.kind }, target: { kind: 'project', id: input.projectId, revision: null }, networkDestination: null, dataSensitivity: 'public', estimatedCost: null, environment: 'development', policyVersion: policy.version }, policy, now: Date.now() });
     if (decision.decision !== 'allow') {
       await this.transaction(p, 'policy.denied', async c => {
-        await this.idempotent(c, p, 'policy.denied', key, input, async () => { await this.appendAudit(c, p, 'policy.denied', input.projectId, input, { decision: decision.decision, reason: decision.reason }); return { decision: decision.decision }; });
+        await this.idempotent(c, p, 'policy.denied', key, input, async () => { await this.appendAudit(c, p, 'policy.denied', input.projectId, input, { decision: decision.decision, reason: decision.reason }, decision); return { decision: decision.decision }; });
       });
       throw new DomainError(decision.decision === 'ask' ? 'APPROVAL_REQUIRED' : 'POLICY_DENIED', 403, decision.decision === 'ask' ? 'This action requires approval. Approval persistence is not available in this slice.' : 'The server policy denies this action.');
     }
@@ -132,7 +132,7 @@ export class Store {
         if (!(await c.query('SELECT id FROM projects WHERE id=$1', [input.projectId])).rows.length) throw new DomainError('PROJECT_NOT_FOUND', 404, 'Project not found.');
         const id = randomUUID();
         await c.query("INSERT INTO runs(tenant_id,id,project_id,actor_id,kind,status,policy_version) VALUES($1,$2,$3,$4,$5,'queued',$6)", [p.tenantId, id, input.projectId, p.actorId, input.kind, policy.version]);
-        await this.appendEvent(c, p, id, 'accepted', 'run.accepted', { kind: input.kind, projectId: input.projectId, status: 'queued' });
+        await this.appendEvent(c, p, id, 'accepted', 'run.accepted', { kind: input.kind, projectId: input.projectId, status: 'queued' }, decision);
         await this.enqueue(c, p, id, 'start');
         return toRun((await c.query('SELECT * FROM runs WHERE id=$1', [id])).rows[0]!);
       });

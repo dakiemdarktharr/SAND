@@ -1,0 +1,65 @@
+{
+  "observedAt": "2026-09-16T12:37:46.108Z",
+  "platform": "win32",
+  "node": "v24.18.0",
+  "runId": "666fbeb7-8566-4aa5-ad4d-98070d0aafb3",
+  "status": "completed",
+  "models": [
+    "qwen2.5-coder:7b",
+    "llama3:latest"
+  ],
+  "realProviderCalls": 3,
+  "restoredEvents": 9,
+  "audit": {
+    "valid": true,
+    "checked": 12,
+    "headHash": "d45506792b40f0424fa02e327fa50cc830edc29ed60eeef192d81ecc46153d44"
+  },
+  "elapsedMs": 22595,
+  "steps": [
+    {
+      "id": "analyst",
+      "attempt": 1,
+      "requestedModel": "qwen2.5-coder:7b",
+      "reportedModel": "qwen2.5-coder:7b",
+      "provider": "ollama",
+      "inputTokens": 116,
+      "outputTokens": 32,
+      "durationMs": 929,
+      "costUsd": null,
+      "costSource": null,
+      "observedAt": "2026-09-16T12:37:24.505Z",
+      "truncated": false
+    },
+    {
+      "id": "critic",
+      "attempt": 1,
+      "requestedModel": "llama3:latest",
+      "reportedModel": "llama3:latest",
+      "provider": "ollama",
+      "inputTokens": 117,
+      "outputTokens": 20,
+      "durationMs": 10542,
+      "costUsd": null,
+      "costSource": null,
+      "observedAt": "2026-09-16T12:37:34.123Z",
+      "truncated": false
+    },
+    {
+      "id": "synthesis",
+      "attempt": 1,
+      "requestedModel": "qwen2.5-coder:7b",
+      "reportedModel": "qwen2.5-coder:7b",
+      "provider": "ollama",
+      "inputTokens": 196,
+      "outputTokens": 51,
+      "durationMs": 11736,
+      "costUsd": null,
+      "costSource": null,
+      "observedAt": "2026-09-16T12:37:45.867Z",
+      "truncated": false
+    }
+  ],
+  "cost": "Unknown; local electricity/hardware cost is not estimated",
+  "claims": "One real local run; not a quality, p95, crash/power-loss, or cloud benchmark"
+}

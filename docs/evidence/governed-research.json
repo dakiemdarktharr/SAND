@@ -1,0 +1,32 @@
+{
+  "event": "demo.completed",
+  "observedAt": "2026-09-16T14:44:45.537Z",
+  "status": "completed",
+  "model": "qwen2.5-coder:7b",
+  "realModelTurns": 2,
+  "toolCalls": 1,
+  "tool": "web_read",
+  "preservedEvents": 6,
+  "audit": {
+    "valid": true,
+    "checked": 17,
+    "headHash": "55f0dd7212afea2234f71d792948cdf6dcae6a85956cb4706be0ed1b74895915"
+  },
+  "elapsedMs": 2460,
+  "usage": {
+    "text": "The domain example.com is used in documentation examples as a placeholder. It is intended for educational purposes and should not be used for actual operations. The information provided is untrusted and should not be relied upon for critical decisions.",
+    "requestedModel": "qwen2.5-coder:7b",
+    "reportedModel": "qwen2.5-coder:7b",
+    "provider": "ollama",
+    "inputTokens": 597,
+    "outputTokens": 88,
+    "durationMs": 2027,
+    "costUsd": null,
+    "costSource": null,
+    "observedAt": "2026-09-16T14:44:45.483Z",
+    "truncated": false
+  },
+  "directory": ".runtime/governed-demo-apTwac",
+  "claims": "One actual local run; generated public demo brief; scripted approval restricted to one exact configured call; not a production or quality benchmark",
+  "evidenceNote": "Only the machine-specific directory was normalized; observed model text and measurements are preserved."
+}

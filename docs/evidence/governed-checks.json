@@ -1,0 +1,66 @@
+{
+  "observedAt": "2026-09-16T15:21:57.286Z",
+  "platform": "win32",
+  "node": "v24.18.0",
+  "regression": {
+    "command": "npm test",
+    "passed": 164,
+    "skipped": 16,
+    "durationMs": 24370,
+    "skips": [
+      "5 Temporal opt-in",
+      "5 provider-discovery opt-in",
+      "5 inference opt-in/model/credential",
+      "1 external staging database"
+    ]
+  },
+  "temporal": {
+    "command": "npm run test:durability -- --live-registry",
+    "passed": 5,
+    "skipped": 0,
+    "durationMs": 24410,
+    "server": "1.32.0",
+    "cli": "1.9.1",
+    "scope": "registry.refresh only; actual native PostgreSQL and ephemeral Temporal development server; public OpenRouter discovery"
+  },
+  "desktop": {
+    "passed": 7,
+    "skipped": 1,
+    "durationMs": 48100,
+    "scope": "Actual Electron, OS vault, real local inference, restart at approval; full-stack handled separately"
+  },
+  "lint": "passed",
+  "typecheck": "passed",
+  "build": "passed",
+  "dependencyAudit": {
+    "vulnerabilities": 0,
+    "note": "npm registry advisory snapshot, not comprehensive security proof"
+  },
+  "secretScan": "gitleaks: no leaks found",
+  "installer": {
+    "path": "release/SAND Preview Setup 0.1.0.exe",
+    "bytes": 112258796,
+    "signature": "NotSigned"
+  },
+  "productionSigningGate": {
+    "exitCode": 1,
+    "expected": true,
+    "reason": "forceCodeSigning refuses missing signing identity"
+  },
+  "limits": "No paid cloud inference, external OIDC, remote MCP OAuth, cross-platform or production validation",
+  "fullstack": {
+    "command": "SAND_FULLSTACK_E2E=1 npx playwright test tests/e2e/fullstack.spec.ts",
+    "passed": 1,
+    "skipped": 0,
+    "durationMs": 14100,
+    "at": "2026-09-16T15:15:15.509Z",
+    "nativePostgres": true,
+    "temporal": true,
+    "publicProvider": "openrouter",
+    "modelCount": 444,
+    "auditValid": true,
+    "elapsedMs": 3579,
+    "authenticatedInference": "not tested",
+    "runId": "ff9ceb00-96f6-4ea5-a39d-5f7760e12725"
+  }
+}

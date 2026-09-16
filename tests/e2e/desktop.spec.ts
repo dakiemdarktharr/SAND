@@ -24,6 +24,7 @@ test.beforeEach(async ({ browserName: _browserName }, testInfo) => {
   const started = performance.now();
   application = await electron.launch({ args: ['.'], env: { ...process.env, SAND_E2E: '1', SAND_TEST_REPOSITORY: repository, SAND_TEST_USER_DATA: path.join(temporary, 'user-data'), SAND_API_TOKEN: '', SAND_API_URL: 'http://127.0.0.1:4310' } });
   page = await application.firstWindow();
+  await page.getByRole('button', {name:'Mở IDE',exact:true}).click();
   await expect(page.getByRole('heading', { name: /Build with/ })).toBeVisible();
   await testInfo.attach('startup-measurement.json', { body: JSON.stringify({ measuredAt: new Date().toISOString(), os: process.platform, coldLaunchToVisibleHeadingMs: Math.round(performance.now() - started), sample: 1, productionBenchmark: false }), contentType: 'application/json' });
 });
@@ -37,7 +38,7 @@ test.afterEach(async () => {
 test('truthful unavailable state, Node isolation, network denial, theme and command palette', async () => {
   await expect(page.getByText('Control plane unavailable', { exact: true })).toBeVisible();
   await expect(page.getByRole('button', { name: 'Start discovery' })).toBeDisabled();
-  expect(await page.evaluate(() => ({ require: typeof (window as unknown as { require?: unknown }).require, process: typeof (window as unknown as { process?: unknown }).process, keys: Object.keys(window.sand) }))).toEqual({ require: 'undefined', process: 'undefined', keys: ['repository', 'control'] });
+  expect(await page.evaluate(() => ({ require: typeof (window as unknown as { require?: unknown }).require, process: typeof (window as unknown as { process?: unknown }).process, keys: Object.keys(window.sand).sort() }))).toEqual({ require: 'undefined', process: 'undefined', keys: ['control', 'repository', 'studio'] });
   const preferences = await application.evaluate(({ BrowserWindow }) => (BrowserWindow.getAllWindows()[0]!.webContents as unknown as { getLastWebPreferences(): { contextIsolation: boolean; sandbox: boolean; nodeIntegration: boolean } }).getLastWebPreferences());
   expect(preferences.contextIsolation).toBe(true); expect(preferences.sandbox).toBe(true); expect(preferences.nodeIntegration).toBe(false);
   expect(await page.evaluate(() => fetch('https://example.com').then(() => 'allowed', () => 'blocked'))).toBe('blocked');

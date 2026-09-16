@@ -40,6 +40,7 @@ test('desktop → authenticated API → PostgreSQL/outbox → Temporal → publi
   try {
     await worker.runUntil(async () => {
       const page = await app.firstWindow();
+      await page.getByRole('button', {name:'Mở IDE',exact:true}).click();
       await expect(page.getByRole('button', { name: 'Start discovery', exact: true })).toBeEnabled({ timeout: 30_000 });
       await page.getByRole('button', { name: 'Start discovery', exact: true }).click();
       await expect.poll(async () => (await db.store.listRuns(db.principal))[0]?.status, { timeout: 60_000 }).toBe('completed');

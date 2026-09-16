@@ -1,0 +1,21 @@
+{
+  "at": "2026-09-16T15:20:21.137Z",
+  "platform": "win32",
+  "arch": "x64",
+  "executablePath": "release/win-unpacked/SAND Preview.exe",
+  "security": {
+    "packaged": true,
+    "sandbox": true,
+    "contextIsolation": true,
+    "nodeIntegration": false
+  },
+  "vaultAvailable": true,
+  "mcpStdioDiscovery": "actual subprocess",
+  "launchToVisibleMs": 642,
+  "archiveFiles": 16,
+  "archiveBytes": 4781988,
+  "archiveSha256": "c254900a137ee1fa72c243db01fd0ea154d0d0959472b09ec1f4f49062dd134e",
+  "result": "passed",
+  "installerLifecycle": "not tested",
+  "productionSigning": "not configured"
+}

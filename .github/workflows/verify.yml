@@ -1,0 +1,37 @@
+name: Verify SAND preview
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run setup:desktop
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+      - run: npm run test:e2e
+      - run: npm audit --audit-level=moderate
+      - name: Source dependency SBOM (not a signed binary SBOM)
+        run: npm sbom --sbom-format cyclonedx | Out-File -Encoding utf8 sbom.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: preview-verification
+          path: |
+            artifacts/local/e2e-results.json
+            artifacts/local/*.png
+            sbom.json
+          if-no-files-found: warn
+# Live provider credentials are deliberately absent on PRs. Staging must explicitly
+# enable live inference contracts. This workflow does not publish or sign releases.

@@ -1,0 +1,11 @@
+{
+  "at": "2026-09-16T15:15:15.509Z",
+  "nativePostgres": true,
+  "temporal": true,
+  "publicProvider": "openrouter",
+  "modelCount": 444,
+  "auditValid": true,
+  "elapsedMs": 3579,
+  "authenticatedInference": "not tested",
+  "runId": "ff9ceb00-96f6-4ea5-a39d-5f7760e12725"
+}

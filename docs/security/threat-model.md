@@ -150,3 +150,8 @@ Không tự chạy package scripts, Git hooks, LSP, terminal, browser automation
 | Low | Metadata ít nhạy cảm hoặc hardening thiếu nhưng chưa có đường authority gain khả thi | Không gọi vulnerability khi chỉ thấy keyword hoặc khác sở thích kiến trúc |
 
 Confidence và severity tách biệt. Thiếu source/test/deployment evidence là **open question**, không phải bằng chứng control hỏng hoặc hoạt động. Local development mode đã gắn nhãn không được dùng để suy ra production guarantee; nếu có thể bật mode đó vô tình trên endpoint exposed, startup guard trở thành security boundary cần review.
+
+
+## Local MVP supplement — 2026-09-16
+
+The implemented single-user Workflow Studio has a separate [source-backed threat model](studio-threat-model.md). The production target above remains a target, not a claim that those controls are implemented.

@@ -1,0 +1,12 @@
+{
+  "observedAt": "2026-09-16T15:15:11.204Z",
+  "stats": {
+    "startTime": "2026-09-16T15:04:37.557Z",
+    "duration": 48089.465,
+    "expected": 7,
+    "skipped": 1,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "note": "Full suite with SAND_STUDIO_LIVE_TESTS=1; separate full-stack run reported independently"
+}

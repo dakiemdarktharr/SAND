@@ -1,3 +1,5 @@
+> Historical slice documentation. Current governed tools, credential storage and open Stage 1 gates are described in [governed tools](governed-tools.md). Later evidence supersedes the old feature/limitation list below.
+
 # SAND desktop — batch 01
 
 Status: an implemented Windows development preview. It is not the complete IDE, a production agent runtime, or a signed production release.
