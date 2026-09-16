@@ -9,8 +9,8 @@ jobs:
     runs-on: windows-latest
     timeout-minutes: 25
     steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
-      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
         with:
           node-version: '24'
           cache: npm
@@ -24,7 +24,7 @@ jobs:
       - run: npm audit --audit-level=moderate
       - name: Source dependency SBOM (not a signed binary SBOM)
         run: npm sbom --sbom-format cyclonedx | Out-File -Encoding utf8 sbom.json
-      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
         if: always()
         with:
           name: preview-verification
